@@ -1,0 +1,172 @@
+<class-diagram version="0.9.86" automaticImage="PNG" icons="true" always-add-relationships="true" generalizations="true" 
+  realizations="true" associations="true" dependencies="true" nesting-relationships="true">  
+  <class corner="BOTTOM_RIGHT" language="java" name="ClientProxy" project="JavajackServer" 
+    file="/JavajackServer/src/ClientProxy.java" binary="false">    
+    <position x="617" y="160" width="223" height="275"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class corner="BOTTOM_RIGHT" language="java" name="Server" project="JavajackServer" 
+    file="/JavajackServer/src/Server.java" binary="false">    
+    <position x="663" y="37" width="113" height="83"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class corner="BOTTOM_RIGHT" language="java" name="GameDB" project="JavajackServer" 
+    file="/JavajackServer/src/GameDB.java" binary="false">    
+    <position x="87" y="160" width="186" height="67"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class corner="BOTTOM_RIGHT" language="java" name="ClientProxy.Reader" project="JavajackServer" 
+    file="/JavajackServer/src/ClientProxy.java" binary="false">    
+    <position x="655" y="475" width="84" height="67"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class corner="BOTTOM_RIGHT" language="java" name="Game" project="JavajackServer" file="/JavajackServer/src/Game.java" 
+    binary="false">    
+    <position x="224" y="475" width="158" height="275"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class corner="BOTTOM_RIGHT" language="java" name="ServerModel" project="JavajackServer" 
+    file="/JavajackServer/src/ServerModel.java" binary="false">    
+    <position x="313" y="160" width="254" height="227"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class corner="BOTTOM_RIGHT" language="java" name="Cell" project="JavajackShared" file="/JavajackShared/src/Cell.java" 
+    binary="false">    
+    <position x="133" y="790" width="113" height="147"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <interface corner="BOTTOM_RIGHT" language="java" name="PlayerListenerInterface" project="JavajackShared" 
+    file="/JavajackShared/src/PlayerListenerInterface.java" binary="false">    
+    <position x="779" y="475" width="157" height="163"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </interface>  
+  <interface corner="BOTTOM_RIGHT" language="java" name="ServerModelListenerInterface" project="JavajackShared" 
+    file="/JavajackShared/src/ServerModelListenerInterface.java" binary="false">    
+    <position x="422" y="475" width="193" height="163"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </interface>  
+  <association>    
+    <source project="JavajackServer" name="ServerModel" file="/JavajackServer/src/ServerModel.java" binary="false" 
+      navigable="false">      
+      <attribute name="model"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target project="JavajackServer" name="ServerModel" file="/JavajackServer/src/ServerModel.java" binary="false" 
+      navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association>    
+    <source project="JavajackServer" name="GameDB" file="/JavajackServer/src/GameDB.java" binary="false" 
+      navigable="false">      
+      <attribute name="db"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </source>    
+    <target project="JavajackServer" name="Game" file="/JavajackServer/src/Game.java" binary="false" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency>    
+    <bendpoint x="870" y="160"/>    
+    <source project="JavajackServer" name="Server" file="/JavajackServer/src/Server.java" binary="false"/>    
+    <target project="JavajackShared" name="PlayerListenerInterface" 
+      file="/JavajackShared/src/PlayerListenerInterface.java" binary="false"/>  
+  </dependency>  
+  <association>    
+    <source project="JavajackServer" name="Server" file="/JavajackServer/src/Server.java" binary="false" 
+      navigable="false">      
+      <attribute name="model"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target project="JavajackServer" name="ServerModel" file="/JavajackServer/src/ServerModel.java" binary="false" 
+      navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association>    
+    <source project="JavajackServer" name="ClientProxy" file="/JavajackServer/src/ClientProxy.java" binary="false" 
+      navigable="false">      
+      <attribute name="listener"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target project="JavajackShared" name="PlayerListenerInterface" 
+      file="/JavajackShared/src/PlayerListenerInterface.java" binary="false" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association>    
+    <source project="JavajackServer" name="ServerModel" file="/JavajackServer/src/ServerModel.java" binary="false" 
+      navigable="false">      
+      <attribute name="modelListener"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target project="JavajackShared" name="ServerModelListenerInterface" 
+      file="/JavajackShared/src/ServerModelListenerInterface.java" binary="false" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <nesting>    
+    <source project="JavajackServer" name="ClientProxy" file="/JavajackServer/src/ClientProxy.java" binary="false"/>    
+    <target project="JavajackServer" name="ClientProxy.Reader" file="/JavajackServer/src/ClientProxy.java" 
+      binary="false"/>  
+  </nesting>  
+  <association>    
+    <source project="JavajackServer" name="Server" file="/JavajackServer/src/Server.java" binary="false" 
+      navigable="false">      
+      <attribute name="proxy"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target project="JavajackServer" name="ClientProxy" file="/JavajackServer/src/ClientProxy.java" binary="false" 
+      navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization>    
+    <source project="JavajackServer" name="ClientProxy" file="/JavajackServer/src/ClientProxy.java" binary="false"/>    
+    <target project="JavajackShared" name="ServerModelListenerInterface" 
+      file="/JavajackShared/src/ServerModelListenerInterface.java" binary="false"/>  
+  </realization>  
+  <association>    
+    <source project="JavajackServer" name="ServerModel" file="/JavajackServer/src/ServerModel.java" binary="false" 
+      navigable="false">      
+      <attribute name="games"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </source>    
+    <target project="JavajackServer" name="Game" file="/JavajackServer/src/Game.java" binary="false" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association>    
+    <source project="JavajackServer" name="Game" file="/JavajackServer/src/Game.java" binary="false" navigable="false">      
+      <attribute name="playerCells"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </source>    
+    <target project="JavajackShared" name="Cell" file="/JavajackShared/src/Cell.java" binary="false" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <classifier-display autosize="true" package="true" initial-value="false" signature="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true"/>    
+    <operations public="true" package="true" protected="true" private="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>
