@@ -141,46 +141,57 @@ public class BlackJackGame
 		out.println();	
 	}
 	
-	// Go through each player's hand and determine if the player beat the dealer. Each
-	// player's cash and win count is updated accordingly.
+	/**
+	 * Go through each player's hand and determine if the player beat the dealer. Each
+	 * player's cash and win count is updated accordingly.
+	 */
 	public void determineWinners()
 	{
-		out.println("Dealer:: " + dealer.getHandValue() + "\n");
+		int dealerHandValue = dealer.getHandValue();
+		boolean dealerBlackjack = dealerHandValue == 21 && dealer.getHandSize() == 2;
+		out.println("Dealer:: " + dealerHandValue + "\n");
 		
 		for (int player = 0; player < players.length; player++) {
-			// Players cannot play or win without any cash
-			if (players[player].getCash() > 0) {
+			if (players[player].canPlay()) {
+				String name = players[player].getName();
+				int bet = players[player].getBet();
+				int playerHandValue = players[player].getHandValue();
+				boolean playerBlackjack = playerHandValue == 21 && players[player].getHandSize() == 2;
+				
 				// LOSS: Player busted and automatically loses
-				if (players[player].getHandValue() > 21) {
-					out.println(players[player].getName() + ":: " + players[player].getHandValue());
-					out.println(players[player].getName() + " BUSTED");
-					players[player].setCash(players[player].getCash() - players[player].getBet());
+				if (playerHandValue > 21) {
+					out.println(name + ":: " + playerHandValue);
+					out.println(name + " BUSTED");
+					players[player].setCash(players[player].getCash() - bet);
 				}
-				// WIN: Player has higher hand than dealer without busting
-				else if (players[player].getHandValue() > dealer.getHandValue() && players[player].getHandValue() <= 21) {
-					out.println(players[player].getName() + ":: " + players[player].getHandValue());
-					out.println(players[player].getName() + " wins!");
+				// WIN: Player has blackjack but dealer does not
+				else if (playerBlackjack && !dealerBlackjack) {
+					out.println(name + ":: " +playerHandValue);
+					out.println(name + " BLACKJACK!");
 					players[player].setWinCount(players[player].getWinCount() + 1);
-					players[player].setCash(players[player].getCash() + players[player].getBet());
+					// NOTE: This has been hard coded for 3:2 Blackjack
+					players[player].setCash(players[player].getCash() + ((3 * bet) / 2));
 				}
-				// LOSS: Player has lower hand than, or equivalent to, the dealer (if dealer's hand <= 21)
-				else if ((players[player].getHandValue() < dealer.getHandValue() || players[player].getHandValue() == dealer.getHandValue())
-						&& dealer.getHandValue() <= 21) {
-					out.println(players[player].getName()+ ":: " +players[player].getHandValue());
-					out.println("Dealer wins. :(");
-					dealer.setWinCount(++dealerWins);
-					players[player].setCash(players[player].getCash() - players[player].getBet());
-				}
-				// WIN: Dealer busted and player did not
-				else if (dealer.getHandValue() > 21 && players[player].getHandValue() <= 21) {
-					out.println(players[player].getName()+ ":: " +players[player].getHandValue());
-					out.println(players[player].getName()+ " wins!");
+				// WIN: Dealer busted and player did not, or player has higher hand than dealer
+				else if (dealerHandValue > 21 || (playerHandValue > dealerHandValue)) {
+					out.println(name + ":: " +playerHandValue);
+					out.println(name + " wins!");
 					players[player].setWinCount(players[player].getWinCount() + 1);
-					players[player].setCash(players[player].getCash() + (players[player].getBet()));
+					players[player].setCash(players[player].getCash() + bet);
 				}
+				// PUSH: Player and dealer both have blackjack, or neither have blackjack but have the same hand value
+				else if (playerBlackjack && dealerBlackjack
+						|| (!playerBlackjack && !dealerBlackjack && playerHandValue == dealerHandValue)) {
+					out.println(name + ":: " +playerHandValue);
+					out.println(name + " PUSH");
+					// Make no changes to the player's cash
+				}
+				// LOSS: Player has lower hand than, or equivalent to, the dealer
 				else {
-					out.println("HUH??");
-					out.println(players[player].getName()+ ":: " +players[player].getHandValue());
+					out.println(name + ":: " +playerHandValue);
+					out.println("Dealer wins.");
+					dealer.setWinCount(++dealerWins);
+					players[player].setCash(players[player].getCash() - bet);
 				}
 				out.println();		
 			}
