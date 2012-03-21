@@ -70,9 +70,11 @@ public abstract class AbstractPlayer implements Playerable
 			// Player busted; check for aces that can then take the value of 1
 			for (Card c: hand) {
 				// Check if this card is an ace
-				if (c.getValue() == 1) {
+				if (c.getFace() == 1) {
 					total = total - 10;
-					break;
+					if (total <= 21) {
+						break;
+					}
 				}
 			}
 			return total;
