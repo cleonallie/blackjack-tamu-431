@@ -87,4 +87,9 @@ public abstract class AbstractPlayer implements Playerable
 	{
 		return "hand = " + hand.toString() + " \n-  # wins " + winCount;
 	}
+	
+	public boolean canSplit()
+	{
+		return hand.size()==2 && hand.get(0).isPair(hand.get(1));
+	}
 }

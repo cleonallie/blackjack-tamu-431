@@ -35,6 +35,28 @@ public class Player extends AbstractPlayer
 			return false;
 	}
 	
+	public boolean isDoubling()
+	{
+		if ((cash - 2*bet)>=0 && getHandValue()<21)
+		{
+			out.println("Enter \"double\" to double down or anything else to continue.");
+			if (scan.nextLine().equalsIgnoreCase("double"))
+				return true;
+		}
+		return false;		
+	}
+	
+	public boolean isSplitting()
+	{
+		if ((cash - 2*bet)>=0 && canSplit())
+		{
+			out.println("Enter \"split\" to split or anything else to continue.");
+			if (scan.nextLine().equalsIgnoreCase("split"))
+				return true;
+		}
+		return false;
+	}
+	
 	public void setCash(int m)
 	{
 		cash = m;

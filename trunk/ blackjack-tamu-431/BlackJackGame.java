@@ -1,6 +1,8 @@
 import static java.lang.System.*;
 import java.util.Scanner;
 import java.util.ArrayList;
+
+import engine.Card;
 import players.Player;
 import players.Dealer;
 
@@ -106,17 +108,34 @@ public class BlackJackGame
 				out.println("Total:: " +players[player].getHandValue());
 				out.println();
 				
-				// Continue checking if player wants to hit while total is under 21
-				while(players[player].getHandValue() < 21){
-					if (players[player].isHitting()) {
-						players[player].addCardToHand(dealer.deal());
-						out.println("\tDrew: " +players[player].getLastCard());
-						out.println("\tTotal:: " +players[player].getHandValue());
-					}
-					else
-						break;					
+				// Double?
+				if (players[player].isDoubling()) {
+					players[player].setBet( players[player].getBet()*2 );
+					players[player].addCardToHand(dealer.deal());
+					out.println("\tDrew: " +players[player].getLastCard());
+					out.println("\tTotal:: " +players[player].getHandValue() + "\n");
+				} 
+				// Split?
+				else if (players[player].isSplitting()) {
+					players[player].playSplitHand1();
+					players[player].addCardToHand(dealer.deal());
+					out.println("\nDrew: " +players[player].getLastCard());
+					out.println(players[player].getName() + "'s 1st " + players[player]);
+					out.println("Total:: " + players[player].getHandValue() + "\n");
+					hitPlayer(player);
+					
+					players[player].playSplitHand2( players[player].getHand1Value() );
+					players[player].addCardToHand(dealer.deal());
+					out.println("---------\nDrew: " +players[player].getLastCard());
+					out.println(players[player].getName() + "'s 2nd " + players[player]);
+					out.println("Total:: " +players[player].getHandValue() + "\n");
+					hitPlayer(player);
+					
+					
 				}
-				out.println();
+				else {
+					hitPlayer(player);
+				}
 				
 				// Check if player busted
 				if (players[player].getHandValue() > 21)
@@ -125,6 +144,21 @@ public class BlackJackGame
 					allPlayersBust = false;
 			}
 		}		
+	}
+
+	// Continue checking if player wants to hit while total is under 21
+	public void hitPlayer(int player)
+	{
+		while(players[player].getHandValue() < 21){
+			if (players[player].isHitting()) {
+				players[player].addCardToHand(dealer.deal());
+				out.println("\tDrew: " +players[player].getLastCard());
+				out.println("\tTotal:: " +players[player].getHandValue());
+			}
+			else
+				break;					
+		}
+		out.println();
 	}
 	
 	// Let the dealer take his turn
@@ -157,6 +191,18 @@ public class BlackJackGame
 				int bet = players[player].getBet();
 				int playerHandValue = players[player].getHandValue();
 				boolean playerBlackjack = playerHandValue == 21 && players[player].getHandSize() == 2;
+				
+				int h1v = players[player].getHand1Value();
+				if (h1v != 0) {
+					if (h1v > 21 && playerHandValue > 21)
+						playerHandValue = (h1v < playerHandValue) ? h1v : playerHandValue;
+					else if (h1v <= 21 && playerHandValue <= 21)
+						playerHandValue = (h1v > playerHandValue) ? h1v : playerHandValue;
+					else
+						playerHandValue = (h1v < playerHandValue) ? h1v : playerHandValue;
+					
+					playerBlackjack = false;
+				}
 				
 				// LOSS: Player busted and automatically loses
 				if (playerHandValue > 21) {

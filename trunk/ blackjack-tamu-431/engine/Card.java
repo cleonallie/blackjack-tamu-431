@@ -51,6 +51,18 @@ public abstract class Card
 		}
 		return false;
 	}
+	
+	public boolean isPair(Object obj)
+	{
+		Card compareCard = (Card)obj;
+
+		// if not a face card 
+		if (compareCard.getFace()<10)
+			// same face
+			return compareCard.getFace() == this.getFace();
+		else
+			return this.getFace() >= 10;
+	}
 
   	public String toString()
 	{
