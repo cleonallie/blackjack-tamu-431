@@ -12,12 +12,15 @@ import engine.Card;
 public abstract class AbstractPlayer implements Playerable
 {
 	private ArrayList<Card> hand;
+	private Card splitCard2;
+	private int hand1Value;
 	private int winCount;
 
 	public AbstractPlayer()
 	{
 		hand = new ArrayList<Card>();
 		winCount = 0;
+		hand1Value = 0;
 	}
 	
 	public void addCardToHand( Card temp )
@@ -38,6 +41,8 @@ public abstract class AbstractPlayer implements Playerable
 	public void resetHand( )
 	{
 		hand.clear();
+		splitCard2 = null;
+		hand1Value = 0;
 	}
 
 	public void setWinCount( int numwins )
@@ -91,5 +96,23 @@ public abstract class AbstractPlayer implements Playerable
 	public boolean canSplit()
 	{
 		return hand.size()==2 && hand.get(0).isPair(hand.get(1));
+	}
+	
+	public void playSplitHand1()
+	{
+		splitCard2 = getLastCard();
+		hand.remove(1);
+	}
+	
+	public void playSplitHand2(int h1v)
+	{
+		hand1Value = h1v;
+		hand.clear();
+		addCardToHand(splitCard2);
+	}
+	
+	public int getHand1Value()
+	{
+		return hand1Value;
 	}
 }
