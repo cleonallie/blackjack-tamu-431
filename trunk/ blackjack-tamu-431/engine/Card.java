@@ -44,6 +44,9 @@ public abstract class Card
 
 	public boolean equals(Object obj)
 	{
+		if (obj == null)
+			return false;
+		
 		Card compareCard = (Card)obj;
 		if (compareCard.getFace() == this.getFace()) {
 			if (compareCard.getSuit().equals(this.getSuit()))

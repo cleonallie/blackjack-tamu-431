@@ -19,6 +19,12 @@ public class Dealer extends AbstractPlayer
 		super();
 		deckOfCards = new Deck();
 	}
+	
+	public Dealer(int numberOfDecks)
+	{
+		super();
+		deckOfCards = new Deck(numberOfDecks);
+	}
 
 	public Deck shuffle()
 	{
@@ -28,6 +34,9 @@ public class Dealer extends AbstractPlayer
 
 	public Card deal()
 	{
+		if (deckOfCards.numCardsLeft() == 0) {
+			deckOfCards.addExtraDeck();
+		}
 		return deckOfCards.nextCard();
 	}
 

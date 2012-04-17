@@ -64,11 +64,18 @@ public class Player extends AbstractPlayer
 	
 	public void setBet(int b)
 	{
+		/*
 		while (b > getCash()) {
 			out.print("Bet exceeds cash available. Enter new bet: $");
 			b = scan.nextInt();
 		}
-		bet = b;
+		*/
+		if (b > cash)
+			bet = cash;
+		else if (b < 0)
+			bet = 0;
+		else
+			bet = b;
 	}
 	
 	public void setName(String n)
