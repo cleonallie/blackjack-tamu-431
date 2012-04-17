@@ -1,0 +1,5 @@
+C:\Users\KevinsLaptop\Desktop\BlackJackDealer\BlackJackDealer\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\KevinsLaptop\Desktop\BlackJackDealer\BlackJackDealer\bin\Debug\BlackJackDealer.exe
+C:\Users\KevinsLaptop\Desktop\BlackJackDealer\BlackJackDealer\bin\Debug\BlackJackDealer.pdb
+C:\Users\KevinsLaptop\Desktop\BlackJackDealer\BlackJackDealer\obj\x86\Debug\BlackJackDealer.exe
+C:\Users\KevinsLaptop\Desktop\BlackJackDealer\BlackJackDealer\obj\x86\Debug\BlackJackDealer.pdb
