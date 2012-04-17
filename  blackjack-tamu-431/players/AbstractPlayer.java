@@ -30,7 +30,10 @@ public abstract class AbstractPlayer implements Playerable
 	
 	public Card showCard()
 	{
-		return hand.get(0);
+		if (hand.size() > 0)
+			return hand.get(0);
+		else
+			return null;
 	}
 	
 	public int showCardVal()
@@ -50,6 +53,11 @@ public abstract class AbstractPlayer implements Playerable
 		winCount = numwins;
 	}
 
+	public ArrayList<Card> getHand()
+	{
+		return hand;
+	}
+	
 	public int getWinCount()
 	{
 		return winCount;
@@ -62,6 +70,9 @@ public abstract class AbstractPlayer implements Playerable
 	
 	public Card getLastCard()
 	{
+		if (hand.size() < 1)
+			return null;
+		
 		return hand.get(hand.size()-1);
 	}
 
