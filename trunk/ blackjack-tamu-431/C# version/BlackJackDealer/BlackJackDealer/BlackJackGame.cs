@@ -220,7 +220,7 @@ public class BlackJackGame
 		Console.WriteLine("Dealer total:: " +dealer.getHandValue());
 		// Dealer continues to hit until hand value is over 16 or until he busts
 		while (dealer.isHitting()) {
-			Console.WriteLine("Dealer draws: " +dealer.getLastCard());
+            Console.WriteLine("Dealer draws: " + dealer.getLastCard());
 			Console.WriteLine("Dealer total:: " +dealer.getHandValue());
 		}
         Console.WriteLine();	
@@ -368,13 +368,13 @@ public class BlackJackGame
 			displayGameHeader_Console(gameNumber);	// Display game information
 			shuffleAndReset();				// Shuffle and reset all hands and variables
 			dealFirstCards();				// Deal each player their first cards
-			
+			placeBets_Console();
 			//Shows dealer's card
 			Console.WriteLine("---------");			
-			Console.WriteLine("Dealer shows: " + dealer.showCard());
+			Console.WriteLine("Dealer shows: " + dealer.showCard().getSuit());
 			Console.WriteLine("Dealer total:: " + dealer.showCardVal() + "\n");
 			
-			placeBets_Console();					// Place bets for each player
+								// Place bets for each player
 			takePlayerTurns_Console();				// Go through each player's turn
 			if (!allPlayersBust)
 				takeDealersTurn_Console();			// Only take dealer's turn if a player didn't bust
