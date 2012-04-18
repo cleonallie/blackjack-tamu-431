@@ -44,7 +44,7 @@ namespace engine
         }
 
         // Abstracted because card value depends on the game as well as the card
-        public virtual int getValue(){return 0;}
+        public abstract int getValue();
 
         public bool equals(object obj)
         {
