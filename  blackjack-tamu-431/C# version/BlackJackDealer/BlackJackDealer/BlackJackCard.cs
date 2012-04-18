@@ -19,7 +19,7 @@ namespace engine
         //    //super(v,s)
         }
 
-        new public int getValue()
+        public override int getValue()
         {
             int value = 0;
         
