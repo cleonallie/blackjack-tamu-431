@@ -17,8 +17,8 @@
 				</Grid.ColumnDefinitions>
 				<Grid Grid.Row="0" Grid.ColumnSpan="2">
                     <Grid Margin="0,6,245,0">
-                        <Image  Source="C:\Users\KevinsLaptop\Desktop\repository\AY\BlackJack-CS\BlackJack-CS\Images\spades-a-75.png "  />
-                    </Grid>
+                        <Image Source="C:\Users\KevinsLaptop\Desktop\repository\AY\BlackJack-CS\BlackJack-CS\Images\spades-a-75.png " />
+                     </Grid>
                     <TextBlock Text="BlackJack" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="50" FontWeight="Bold" FontFamily="Magneto" TextAlignment="Center" Background="{x:Null}"><TextBlock.Foreground><LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0"><GradientStop Color="Black" Offset="0" /><GradientStop Color="#FF750303" Offset="1" /></LinearGradientBrush></TextBlock.Foreground></TextBlock>
                 </Grid>
 				<Grid Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
