@@ -109,6 +109,7 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\Chip - dark blue.png" />
+    <Resource Include="Images\spades-a-75.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\Chip - dark red.png" />
