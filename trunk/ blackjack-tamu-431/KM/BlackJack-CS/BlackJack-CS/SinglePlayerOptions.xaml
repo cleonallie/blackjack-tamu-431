@@ -4,19 +4,72 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
-             d:DesignHeight="500" d:DesignWidth="700" Background="DarkGreen">
+             d:DesignHeight="600" d:DesignWidth="800" Background="DarkGreen">
     <Grid>
+        <Canvas>
+            <Canvas.Triggers>
+            <EventTrigger RoutedEvent="Canvas.Loaded">
+                <EventTrigger.Actions>
+                    <BeginStoryboard>
+                        <Storyboard BeginTime="0" Duration="Forever">
+                            <DoubleAnimation Storyboard.TargetName="e1" Storyboard.TargetProperty="(Canvas.Right)" From="0" To="400" AutoReverse="true" BeginTime="0:0:0" Duration="0:0:1" RepeatBehavior="Forever"/>
+                            <DoubleAnimation Storyboard.TargetName="e2" Storyboard.TargetProperty="(Canvas.Left)" From="0" To="400" AutoReverse="true" BeginTime="0:0:0" Duration="0:0:1" RepeatBehavior="Forever"/>
+                            <DoubleAnimation Storyboard.TargetName="e3" Storyboard.TargetProperty="(Canvas.Top)" From="0" To="300" AutoReverse="true" BeginTime="0:0:0" Duration="0:0:1" RepeatBehavior="Forever"/>
+                            <DoubleAnimation Storyboard.TargetName="e4" Storyboard.TargetProperty="(Canvas.Bottom)" From="0" To="300" AutoReverse="true" BeginTime="0:0:0" Duration="0:0:1" RepeatBehavior="Forever"/>
+                               
+                            </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger.Actions>
+            </EventTrigger>
+        </Canvas.Triggers>
+
+            <Image x:Name="e1" Source="/BlackJack-CS;component/Images/club.png" Stretch="Fill" Width="45" Height="45" />
+            <Image x:Name="e2" Source="/BlackJack-CS;component/Images/heart.png" Stretch="Fill" Width="40" Height="40" />
+
+            <Image x:Name="e3" Source="/BlackJack-CS;component/Images/spade.png" Stretch="Fill" Width="45" Height="45" />
+            <Image x:Name="e4" Source="/BlackJack-CS;component/Images/diamond.png" Stretch="Fill" Width="40" Height="40" />
+           
+        </Canvas>
+            
+      <Canvas Margin="650,500,0,0" >
+        <Canvas.Triggers>
+            <EventTrigger RoutedEvent="Canvas.Loaded">
+                <EventTrigger.Actions>
+                    <BeginStoryboard>
+                        <Storyboard BeginTime="0" Duration="Forever">
+                            <DoubleAnimation Storyboard.TargetName="e5" Storyboard.TargetProperty="(Canvas.Right)" From="0" To="400" AutoReverse="true" BeginTime="0:0:0" Duration="0:0:1" RepeatBehavior="Forever"/>
+                            <DoubleAnimation Storyboard.TargetName="e6" Storyboard.TargetProperty="(Canvas.Left)" From="-600" To="-200" AutoReverse="true" BeginTime="0:0:0" Duration="0:0:1" RepeatBehavior="Forever"/>
+                            <DoubleAnimation Storyboard.TargetName="e7" Storyboard.TargetProperty="(Canvas.Top)" From="-500" To="-200" AutoReverse="true" BeginTime="0:0:0" Duration="0:0:1" RepeatBehavior="Forever"/>
+                            <DoubleAnimation Storyboard.TargetName="e8" Storyboard.TargetProperty="(Canvas.Bottom)" From="0" To="300" AutoReverse="true" BeginTime="0:0:0" Duration="0:0:1" RepeatBehavior="Forever"/>
+
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger.Actions>
+            </EventTrigger>
+        </Canvas.Triggers>
+
+        <Image x:Name="e5" Source="/BlackJack-CS;component/Images/spade.png" Stretch="Fill" Width="45" Height="45" />
+        <Image x:Name="e6" Source="/BlackJack-CS;component/Images/diamond.png" Stretch="Fill" Width="40" Height="40" />
+
+        <Image x:Name="e7" Source="/BlackJack-CS;component/Images/club.png" Stretch="Fill" Width="45" Height="45" />
+        <Image x:Name="e8" Source="/BlackJack-CS;component/Images/heart.png" Stretch="Fill" Width="40" Height="40" />
+
+        </Canvas>
+
         <TextBlock Height="23" HorizontalAlignment="Left" Margin="52,39,0,0" Name="playerNameBlock" Text="Player Name" VerticalAlignment="Top" FontFamily="Cooper" FontSize="16" FontWeight="Normal" FontStyle="Normal" Foreground="Black"></TextBlock>
         <TextBox Height="23" HorizontalAlignment="Left" Margin="52,68,0,0" Name="playerNameTextBox" VerticalAlignment="Top" Width="120" TextChanged="PlayerNameTextBox_TextChanged" Text="Enter Name" IsReadOnly="False" />
         <TextBlock Height="23" HorizontalAlignment="Left" Margin="52,105,0,0" Name="moneyBlock" Text="Starting Cash" VerticalAlignment="Top" Width="141" FontFamily="Cooper" FontSize="16" />
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="52,134,0,0" Name="playerStartingCash" VerticalAlignment="Top" Width="120" TextChanged="playerStartingCash_TextChanged" Text="Starting Cash" MaxLines="6" AutoWordSelection="False" CaretBrush="{x:Null}" ClipToBounds="False" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="52,134,0,0" Name="playerStartingCash" VerticalAlignment="Top" Width="120" TextChanged="playerStartingCash_TextChanged" Text="Starting $" MaxLines="6" AutoWordSelection="False" CaretBrush="{x:Null}" ClipToBounds="False" />
         <ListBox Height="91" HorizontalAlignment="Left" Margin="52,202,0,0" Name="listBox1" VerticalAlignment="Top" Width="143" >
-            <ListBoxItem Content="1 Computer Opponent" Selected="ListBoxItem_Selected"></ListBoxItem>
-            <ListBoxItem Content="2 Computer Opponent" Selected="ListBoxItem_Selected_1"></ListBoxItem>
-            <ListBoxItem Content="3 Computer Opponent" Selected="ListBoxItem_Selected_2"></ListBoxItem>
-            <ListBoxItem Content="4 Computer Opponent" Selected="ListBoxItem_Selected_3"></ListBoxItem>
+            <ListBoxItem Content="0 Computer Opponents" Selected="ListBoxItem_Selected_0" IsSelected="False"></ListBoxItem>
+            <ListBoxItem Content="1 Computer Opponents" Selected="ListBoxItem_Selected_1" IsSelected="False"></ListBoxItem>
+            <ListBoxItem Content="2 Computer Opponents" Selected="ListBoxItem_Selected_2" IsSelected="False"></ListBoxItem>
+            <ListBoxItem Content="3 Computer Opponents" Selected="ListBoxItem_Selected_3" IsSelected="False"></ListBoxItem>
+            <ListBoxItem Content="4 Computer Opponents" Selected="ListBoxItem_Selected_4" IsSelected="False"></ListBoxItem>
         </ListBox>
         <TextBlock Height="23" HorizontalAlignment="Left" Margin="52,173,0,0" Name="textBlock1" Text="Number of Opponents" VerticalAlignment="Top" Width="184" FontFamily="Cooper" FontSize="16" />
-        <Image Height="100" Margin="12,388,588,12" Source="/BlackJack-CS;component/Images/Chip%20-%20back.png" Width="100" />
+        <Image Height="100" MouseDown="backButton" HorizontalAlignment="Left" Margin="36,322,0,0" Name="backButtonImage" Stretch="Fill" VerticalAlignment="Top" Width="100" Source="/BlackJack-CS;component/Images/Chip%20-%20back.png"/>
+        <Image Canvas.Left="495"  MouseDown="startButton" Canvas.Top="322" Height="100" Name="image1" Stretch="Fill" Width="100" Source="/BlackJack-CS;component/Images/Forward%20-%20dark%20red.png" />
     </Grid>
+    
 </UserControl>

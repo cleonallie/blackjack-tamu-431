@@ -19,7 +19,7 @@
                         </LinearGradientBrush>
                     </GroupBox.Background>
                 </GroupBox>
-                <Image Source="/BlackJack-CS;component/Images/Chip%20-%20back.png" Width="100" Height="100" Margin="6,394,694,6" ImageFailed="Image_ImageFailed" />
+                <Image MouseDown="backButton" Source="/BlackJack-CS;component/Images/Chip%20-%20back.png" Width="100" Height="100" Margin="6,394,694,6" ImageFailed="Image_ImageFailed" />
                 <GroupBox Header="User1" Height="300" Name="User1_Box" Width="100" Margin="139,50,561,150" Foreground="White">
                     <GroupBox.Background>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -28,6 +28,7 @@
                         </LinearGradientBrush>
                     </GroupBox.Background>
                 </GroupBox>
+        
                 <GroupBox Header="User2" Height="300" Name="User2_Box" Width="100" Margin="245,50,455,150" Foreground="White">
                     <GroupBox.Background>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">

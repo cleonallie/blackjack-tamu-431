@@ -30,12 +30,27 @@ namespace BlackJack_CS
 
         }
 
-        private void image1_ImageFailed(object sender, ExceptionRoutedEventArgs e)
+        private void gotoSinglePlayerOpsScreen(object sender, ExceptionRoutedEventArgs e)
         {
 
         }
 
-        private void image2_ImageFailed(object sender, ExceptionRoutedEventArgs e)
+        private void gotoMultiplayerOpsScreen(object sender, ExceptionRoutedEventArgs e)
+        {
+
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void singlePlayerButton(object sender, MouseButtonEventArgs e)
+        {
+            Switcher.Switch(new SinglePlayerOptions());
+        }
+
+        private void Image_ImageFailed_1(object sender, ExceptionRoutedEventArgs e)
         {
 
         }
