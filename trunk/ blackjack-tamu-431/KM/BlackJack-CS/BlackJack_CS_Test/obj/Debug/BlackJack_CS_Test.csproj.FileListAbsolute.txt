@@ -1,0 +1,9 @@
+C:\Users\Adam\Documents\School\CSCE 431\Repository\AY\BlackJack-CS\BlackJack_CS_Test\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Adam\Documents\School\CSCE 431\Repository\AY\BlackJack-CS\BlackJack_CS_Test\bin\Debug\BlackJack_CS_Test.dll
+C:\Users\Adam\Documents\School\CSCE 431\Repository\AY\BlackJack-CS\BlackJack_CS_Test\bin\Debug\BlackJack_CS_Test.pdb
+C:\Users\Adam\Documents\School\CSCE 431\Repository\AY\BlackJack-CS\BlackJack_CS_Test\bin\Debug\BlackJack-CS.exe
+C:\Users\Adam\Documents\School\CSCE 431\Repository\AY\BlackJack-CS\BlackJack_CS_Test\bin\Debug\BlackJack-CS.pdb
+C:\Users\Adam\Documents\School\CSCE 431\Repository\AY\BlackJack-CS\BlackJack_CS_Test\bin\Debug\BlackJack-CS_Accessor.exe
+C:\Users\Adam\Documents\School\CSCE 431\Repository\AY\BlackJack-CS\BlackJack_CS_Test\bin\Debug\BlackJack-CS_Accessor.pdb
+C:\Users\Adam\Documents\School\CSCE 431\Repository\AY\BlackJack-CS\BlackJack_CS_Test\obj\Debug\BlackJack_CS_Test.dll
+C:\Users\Adam\Documents\School\CSCE 431\Repository\AY\BlackJack-CS\BlackJack_CS_Test\obj\Debug\BlackJack_CS_Test.pdb

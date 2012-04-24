@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="4ce023ed-1a48-4311-9d19-ad29d45d0568" name="Adam@ADAMS-PC 2012-04-17 21:34:22" runUser="Adams-PC\Adam" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="62262a18-aa2d-4e8c-bb8e-3d6d7920f3cd">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="Adam_ADAMS-PC 2012-04-17 21_34_22">
+      <DeploymentItem filename="C:\Users\Adam\Documents\School\CSCE 431\Repository\AY\BlackJack-CS\BlackJack-CS\bin\Debug\BlackJack-CS.exe" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2012-04-17T21:34:22.8955712-05:00" queuing="2012-04-17T21:34:22.9875765-05:00" start="2012-04-17T21:34:23.1055833-05:00" finish="2012-04-17T21:34:24.2506488-05:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="3" executed="3" passed="3" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="NextCardTest" storage="c:\users\adam\documents\school\csce 431\repository\ay\blackjack-cs\blackjack_cs_test\bin\debug\blackjack_cs_test.dll" id="b166f23b-3352-2b0b-bddf-882e24bc5f05">
+      <Execution id="7bb1e2d3-a203-4453-a6b7-ca22bc99993a" />
+      <TestMethod codeBase="C:/Users/Adam/Documents/School/CSCE 431/Repository/AY/BlackJack-CS/BlackJack_CS_Test/bin/Debug/BlackJack_CS_Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="BlackJack_CS_Test.DeckTest, BlackJack_CS_Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NextCardTest" />
+    </UnitTest>
+    <UnitTest name="EqualsTest" storage="c:\users\adam\documents\school\csce 431\repository\ay\blackjack-cs\blackjack_cs_test\bin\debug\blackjack_cs_test.dll" id="7f15063e-a2c1-fc05-896f-c361ab776252">
+      <Execution id="63b8e682-24e2-4bac-9ba2-4cfa051cba5b" />
+      <TestMethod codeBase="C:/Users/Adam/Documents/School/CSCE 431/Repository/AY/BlackJack-CS/BlackJack_CS_Test/bin/Debug/BlackJack_CS_Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="BlackJack_CS_Test.BlackJackCardTest, BlackJack_CS_Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="EqualsTest" />
+    </UnitTest>
+    <UnitTest name="GetValueTest" storage="c:\users\adam\documents\school\csce 431\repository\ay\blackjack-cs\blackjack_cs_test\bin\debug\blackjack_cs_test.dll" id="9056b851-e442-7d3d-8a9f-a64279402193">
+      <Execution id="0eb8f334-c6e6-4cd6-b0e0-bd7eb24a2f05" />
+      <TestMethod codeBase="C:/Users/Adam/Documents/School/CSCE 431/Repository/AY/BlackJack-CS/BlackJack_CS_Test/bin/Debug/BlackJack_CS_Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="BlackJack_CS_Test.BlackJackCardTest, BlackJack_CS_Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetValueTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="7f15063e-a2c1-fc05-896f-c361ab776252" executionId="63b8e682-24e2-4bac-9ba2-4cfa051cba5b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9056b851-e442-7d3d-8a9f-a64279402193" executionId="0eb8f334-c6e6-4cd6-b0e0-bd7eb24a2f05" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b166f23b-3352-2b0b-bddf-882e24bc5f05" executionId="7bb1e2d3-a203-4453-a6b7-ca22bc99993a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="63b8e682-24e2-4bac-9ba2-4cfa051cba5b" testId="7f15063e-a2c1-fc05-896f-c361ab776252" testName="EqualsTest" computerName="ADAMS-PC" duration="00:00:00.0377394" startTime="2012-04-17T21:34:23.3235957-05:00" endTime="2012-04-17T21:34:23.7136180-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="63b8e682-24e2-4bac-9ba2-4cfa051cba5b">
+      <Output>
+        <StdOut>Testing BlackJackCard : Equals()...
+	Default card | Default card	... OK
+	Default card | (Num, Suit)	... OK
+	Default card | (Face, Suit)	... OK
+	(Num1, Suit1) | (Num1, Suit1)	... OK
+	(Num1, Suit1) | (Num1, Suit2)	... OK
+	(Num1, Suit1) | (Num2, Suit1)	... OK
+	(Num1, Suit1) | (Num2, Suit2)	... OK
+	(Face1, Suit1) | (Face1, Suit1)	... OK
+	(Face1, Suit1) | (Face1, Suit2)	... OK
+	(Face1, Suit1) | (Face2, Suit1)	... OK
+	(Face1, Suit1) | (Face2, Suit2)	... OK
+	(Ace, Suit1) | (Ace, Suit1)	... OK
+	(Ace, Suit1) | (Ace, Suit2)	... OK</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="0eb8f334-c6e6-4cd6-b0e0-bd7eb24a2f05" testId="9056b851-e442-7d3d-8a9f-a64279402193" testName="GetValueTest" computerName="ADAMS-PC" duration="00:00:00.0014658" startTime="2012-04-17T21:34:23.7736215-05:00" endTime="2012-04-17T21:34:23.7816219-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0eb8f334-c6e6-4cd6-b0e0-bd7eb24a2f05">
+      <Output>
+        <StdOut>Testing BlackJackCard : GetValue()...
+	Default card	... OK
+	Number card	... OK
+	Face card	... OK
+	Ace		... OK</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="7bb1e2d3-a203-4453-a6b7-ca22bc99993a" testId="b166f23b-3352-2b0b-bddf-882e24bc5f05" testName="NextCardTest" computerName="ADAMS-PC" duration="00:00:00.0318906" startTime="2012-04-17T21:34:23.8446255-05:00" endTime="2012-04-17T21:34:23.8816276-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7bb1e2d3-a203-4453-a6b7-ca22bc99993a">
+      <Output>
+        <StdOut>Testing Deck : NextCard()...
+	Beginning of deck	... OK
+	Middle of deck		... OK
+	Beyond end of deck	... OK</StdOut>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>
