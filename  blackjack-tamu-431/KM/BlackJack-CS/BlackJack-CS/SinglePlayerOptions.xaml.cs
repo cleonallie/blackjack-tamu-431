@@ -34,7 +34,8 @@ namespace BlackJack_CS
 
         }
 
-        private void ListBoxItem_Selected(object sender, RoutedEventArgs e)
+
+        private void ListBoxItem_Selected_0(object sender, RoutedEventArgs e)
         {
 
         }
@@ -53,6 +54,24 @@ namespace BlackJack_CS
         {
 
         }
+
+        private void ListBoxItem_Selected_4(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void backButton(object sender, MouseButtonEventArgs e)
+        {
+            Switcher.Switch(new Menu());
+        }
+
+        private void startButton(object sender, MouseButtonEventArgs e)
+        {
+            Switcher.Switch(new SinglePlayerGame());
+        }
+ 
+
+
 
 
 
