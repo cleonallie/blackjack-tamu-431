@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="BlackJack_CS.SinglePlayerOptions"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="700" Background="DarkGreen">
+    <Grid>
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="52,39,0,0" Name="playerNameBlock" Text="Player Name" VerticalAlignment="Top" FontFamily="Cooper" FontSize="16" FontWeight="Normal" FontStyle="Normal" Foreground="Black"></TextBlock>
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="52,68,0,0" Name="playerNameTextBox" VerticalAlignment="Top" Width="120" TextChanged="PlayerNameTextBox_TextChanged" Text="Enter Name" IsReadOnly="False" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="52,105,0,0" Name="moneyBlock" Text="Starting Cash" VerticalAlignment="Top" Width="141" FontFamily="Cooper" FontSize="16" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="52,134,0,0" Name="playerStartingCash" VerticalAlignment="Top" Width="120" TextChanged="playerStartingCash_TextChanged" Text="Starting Cash" MaxLines="6" AutoWordSelection="False" CaretBrush="{x:Null}" ClipToBounds="False" />
+        <ListBox Height="91" HorizontalAlignment="Left" Margin="52,202,0,0" Name="listBox1" VerticalAlignment="Top" Width="143" >
+            <ListBoxItem Content="1 Computer Opponent" Selected="ListBoxItem_Selected"></ListBoxItem>
+            <ListBoxItem Content="2 Computer Opponent" Selected="ListBoxItem_Selected_1"></ListBoxItem>
+            <ListBoxItem Content="3 Computer Opponent" Selected="ListBoxItem_Selected_2"></ListBoxItem>
+            <ListBoxItem Content="4 Computer Opponent" Selected="ListBoxItem_Selected_3"></ListBoxItem>
+        </ListBox>
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="52,173,0,0" Name="textBlock1" Text="Number of Opponents" VerticalAlignment="Top" Width="184" FontFamily="Cooper" FontSize="16" />
+        <Image Height="100" Margin="12,388,588,12" Source="/BlackJack-CS;component/Images/Chip%20-%20back.png" Width="100" />
+    </Grid>
+</UserControl>

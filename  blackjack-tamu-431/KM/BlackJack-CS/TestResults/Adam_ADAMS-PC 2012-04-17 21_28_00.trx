@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="53c828a0-2e12-42b3-94c4-aec98bb2a373" name="Adam@ADAMS-PC 2012-04-17 21:28:00" runUser="Adams-PC\Adam" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="62262a18-aa2d-4e8c-bb8e-3d6d7920f3cd">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="Adam_ADAMS-PC 2012-04-17 21_28_00">
+      <DeploymentItem filename="C:\Users\Adam\Documents\School\CSCE 431\Repository\AY\BlackJack-CS\BlackJack-CS\bin\Debug\BlackJack-CS.exe" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2012-04-17T21:28:00.0566741-05:00" queuing="2012-04-17T21:28:00.1866816-05:00" start="2012-04-17T21:28:00.3976936-05:00" finish="2012-04-17T21:28:01.9487823-05:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="2" executed="2" passed="1" error="0" failed="1" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="GetValueTest" storage="c:\users\adam\documents\school\csce 431\repository\ay\blackjack-cs\blackjack_cs_test\bin\debug\blackjack_cs_test.dll" id="9056b851-e442-7d3d-8a9f-a64279402193">
+      <Execution id="041be686-184d-46ad-ab6b-224118712053" />
+      <TestMethod codeBase="C:/Users/Adam/Documents/School/CSCE 431/Repository/AY/BlackJack-CS/BlackJack_CS_Test/bin/Debug/BlackJack_CS_Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="BlackJack_CS_Test.BlackJackCardTest, BlackJack_CS_Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetValueTest" />
+    </UnitTest>
+    <UnitTest name="EqualsTest" storage="c:\users\adam\documents\school\csce 431\repository\ay\blackjack-cs\blackjack_cs_test\bin\debug\blackjack_cs_test.dll" id="7f15063e-a2c1-fc05-896f-c361ab776252">
+      <Execution id="be26a783-1cd2-4b66-9a5b-8ac0cea89ef1" />
+      <TestMethod codeBase="C:/Users/Adam/Documents/School/CSCE 431/Repository/AY/BlackJack-CS/BlackJack_CS_Test/bin/Debug/BlackJack_CS_Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="BlackJack_CS_Test.BlackJackCardTest, BlackJack_CS_Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="EqualsTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="7f15063e-a2c1-fc05-896f-c361ab776252" executionId="be26a783-1cd2-4b66-9a5b-8ac0cea89ef1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9056b851-e442-7d3d-8a9f-a64279402193" executionId="041be686-184d-46ad-ab6b-224118712053" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="be26a783-1cd2-4b66-9a5b-8ac0cea89ef1" testId="7f15063e-a2c1-fc05-896f-c361ab776252" testName="EqualsTest" computerName="ADAMS-PC" duration="00:00:00.0809839" startTime="2012-04-17T21:28:00.6967107-05:00" endTime="2012-04-17T21:28:01.4167519-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="be26a783-1cd2-4b66-9a5b-8ac0cea89ef1">
+      <Output>
+        <StdOut>Testing BlackJackCard : Equals()...
+	Default card | Default card	... OK
+	Default card | (Num, Suit)	...</StdOut>
+        <ErrorInfo>
+          <Message>Assert.IsTrue failed. </Message>
+          <StackTrace>   at BlackJack_CS_Test.BlackJackCardTest.EqualsTest() in C:\Users\Adam\Documents\School\CSCE 431\Repository\AY\BlackJack-CS\BlackJack_CS_Test\BlackJackCardTest.cs:line 56
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="041be686-184d-46ad-ab6b-224118712053" testId="9056b851-e442-7d3d-8a9f-a64279402193" testName="GetValueTest" computerName="ADAMS-PC" duration="00:00:00.0043452" startTime="2012-04-17T21:28:01.4597544-05:00" endTime="2012-04-17T21:28:01.4687549-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="041be686-184d-46ad-ab6b-224118712053">
+      <Output>
+        <StdOut>Testing BlackJackCard : GetValue()...
+	Default card	... OK
+	Number card	... OK
+	Face card	... OK
+	Ace		... OK</StdOut>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>
