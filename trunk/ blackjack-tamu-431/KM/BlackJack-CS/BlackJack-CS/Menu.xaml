@@ -34,11 +34,10 @@
                     <EventTrigger.Actions>
                         <BeginStoryboard>
                             <Storyboard BeginTime="0" Duration="Forever">
-                                <DoubleAnimation Storyboard.TargetName="e1" Storyboard.TargetProperty="(Canvas.Right)" From="0" To="400" AutoReverse="true" BeginTime="0:0:0" Duration="0:0:1" RepeatBehavior="Forever"/>
-                                <DoubleAnimation Storyboard.TargetName="e2" Storyboard.TargetProperty="(Canvas.Left)" From="0" To="400" AutoReverse="true" BeginTime="0:0:0" Duration="0:0:1" RepeatBehavior="Forever"/>
-                                <DoubleAnimation Storyboard.TargetName="e3" Storyboard.TargetProperty="(Canvas.Top)" From="0" To="300" AutoReverse="true" BeginTime="0:0:0" Duration="0:0:1" RepeatBehavior="Forever"/>
-                                <DoubleAnimation Storyboard.TargetName="e4" Storyboard.TargetProperty="(Canvas.Bottom)" From="0" To="300" AutoReverse="true" BeginTime="0:0:0" Duration="0:0:1" RepeatBehavior="Forever"/>
-
+                                <DoubleAnimation Storyboard.TargetName="e1" Storyboard.TargetProperty="(Canvas.Right)" From="0" To="650" AutoReverse="true" BeginTime="0:0:0" Duration="0:0:3" RepeatBehavior="Forever"/>
+                                <DoubleAnimation Storyboard.TargetName="e2" Storyboard.TargetProperty="(Canvas.Left)" From="0" To="650" AutoReverse="true" BeginTime="0:0:0" Duration="0:0:3" RepeatBehavior="Forever"/>
+                                <DoubleAnimation Storyboard.TargetName="e3" Storyboard.TargetProperty="(Canvas.Top)" From="0" To="550" AutoReverse="true" BeginTime="0:0:0" Duration="0:0:2" RepeatBehavior="Forever"/>
+                                <DoubleAnimation Storyboard.TargetName="e4" Storyboard.TargetProperty="(Canvas.Bottom)" From="0" To="550" AutoReverse="true" BeginTime="0:0:0" Duration="0:0:2" RepeatBehavior="Forever"/>
                             </Storyboard>
                         </BeginStoryboard>
                     </EventTrigger.Actions>
@@ -66,10 +65,10 @@
                     <EventTrigger.Actions>
                         <BeginStoryboard>
                             <Storyboard BeginTime="0" Duration="Forever">
-                                <DoubleAnimation Storyboard.TargetName="e5" Storyboard.TargetProperty="(Canvas.Right)" From="0" To="400" AutoReverse="true" BeginTime="0:0:0" Duration="0:0:1" RepeatBehavior="Forever"/>
-                                <DoubleAnimation Storyboard.TargetName="e6" Storyboard.TargetProperty="(Canvas.Left)" From="-600" To="-200" AutoReverse="true" BeginTime="0:0:0" Duration="0:0:1" RepeatBehavior="Forever"/>
-                                <DoubleAnimation Storyboard.TargetName="e7" Storyboard.TargetProperty="(Canvas.Top)" From="-500" To="-200" AutoReverse="true" BeginTime="0:0:0" Duration="0:0:1" RepeatBehavior="Forever"/>
-                                <DoubleAnimation Storyboard.TargetName="e8" Storyboard.TargetProperty="(Canvas.Bottom)" From="0" To="300" AutoReverse="true" BeginTime="0:0:0" Duration="0:0:1" RepeatBehavior="Forever"/>
+                                <DoubleAnimation Storyboard.TargetName="e5" Storyboard.TargetProperty="(Canvas.Right)" From="0" To="650" AutoReverse="true" BeginTime="0:0:0" Duration="0:0:2" RepeatBehavior="Forever"/>
+                                <DoubleAnimation Storyboard.TargetName="e6" Storyboard.TargetProperty="(Canvas.Left)" From="-650" To="0" AutoReverse="true" BeginTime="0:0:0" Duration="0:0:2" RepeatBehavior="Forever"/>
+                                <DoubleAnimation Storyboard.TargetName="e7" Storyboard.TargetProperty="(Canvas.Top)" From="-550" To="0" AutoReverse="true" BeginTime="0:0:0" Duration="0:0:3" RepeatBehavior="Forever"/>
+                                <DoubleAnimation Storyboard.TargetName="e8" Storyboard.TargetProperty="(Canvas.Bottom)" From="0" To="550" AutoReverse="true" BeginTime="0:0:0" Duration="0:0:3" RepeatBehavior="Forever"/>
 
                             </Storyboard>
                         </BeginStoryboard>

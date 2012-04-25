@@ -10,11 +10,6 @@
             <Grid Height="500" HorizontalAlignment="Left" Name="grid1" VerticalAlignment="Top" Width="800">
                 <Border BorderBrush="Black" BorderThickness="4" Height="46" HorizontalAlignment="Left" Margin="-10,6,0,0" Name="border1" VerticalAlignment="Top" Width="723" Background="#26000000" />
                 <TextBlock Text="BlackJack" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="50" FontWeight="Bold" FontFamily="Magneto" TextAlignment="Center" Background="{x:Null}" Margin="203,0,311,440"><TextBlock.Foreground><LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0"><GradientStop Color="Black" Offset="0" /><GradientStop Color="#FF750303" Offset="1" /></LinearGradientBrush></TextBlock.Foreground></TextBlock>
-
-                <Button Content="Hit" Height="23" HorizontalAlignment="Left" Margin="163,471,0,0" Name="hitButton" VerticalAlignment="Top" Width="75" Click="hitButton_Click" />
-                <Button Content="Stand" Height="23" HorizontalAlignment="Right" Margin="0,471,462,0" Name="standButton" VerticalAlignment="Top" Width="75" Click="standButton_Click" />
-                <Button Content="Double" Height="23" HorizontalAlignment="Right" Margin="0,471,362,0" Name="doubleButton" VerticalAlignment="Top" Width="75" Click="doubleButton_Click" />
-                <Button Content="Split" Height="23" HorizontalAlignment="Right" Margin="0,471,262,0" Name="splitButton" VerticalAlignment="Top" Width="75" Click="splitButton_Click" />
                 <GroupBox Header="Dealer" Height="300" HorizontalAlignment="Right" Margin="0,50,667,0" Name="dealer_box" VerticalAlignment="Top" Width="100" Foreground="White">
                     <GroupBox.Background>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -72,7 +67,41 @@
                 <TextBox AcceptsReturn="True" BorderThickness="0" Height="23" HorizontalAlignment="Left" IsReadOnly="True" Margin="377,356,0,0" Name="user3Score" Text="0" TextAlignment="Center" VerticalAlignment="Top" Width="50" />
                 <TextBox AcceptsReturn="True" BorderThickness="0" Height="23" HorizontalAlignment="Left" IsReadOnly="True" Margin="483,356,0,0" Name="user4Score" Text="0" TextAlignment="Center" VerticalAlignment="Top" Width="50" />
                 <TextBox AcceptsReturn="True" BorderThickness="0" Height="23" HorizontalAlignment="Right" IsReadOnly="True" Margin="0,356,163,0" Name="user5Score" Text="0" TextAlignment="Center" VerticalAlignment="Top" Width="50" />
-                <StackPanel Name="stackPanel1" Margin="139,76,562,150" />
+                <StackPanel Name="stackPanel1" Margin="139,76,562,150"></StackPanel>
+                <TextBlock Height="23" HorizontalAlignment="Left" Margin="163,394,0,0" Name="user1Cash" Text="" VerticalAlignment="Top" FontFamily="Cooper" FontSize="16" />
+                <TextBlock Height="23" HorizontalAlignment="Left" Margin="272,394,0,0" Name="user2Cash" Text="" VerticalAlignment="Top" FontFamily="Cooper" FontSize="16" />
+                <TextBlock Height="23" HorizontalAlignment="Left" Margin="377,394,0,0" Name="user3Cash" Text="" VerticalAlignment="Top" FontFamily="Cooper" FontSize="16" />
+                <TextBlock Height="23" HorizontalAlignment="Left" Margin="483,394,0,0" Name="user4Cash" Text="" VerticalAlignment="Top" FontFamily="Cooper" FontSize="16" />
+                <TextBlock Height="23" HorizontalAlignment="Left" Margin="587,394,0,0" Name="user5Cash" Text="" VerticalAlignment="Top" FontFamily="Cooper" FontSize="16" />
+                <Grid Margin="169,407,193,22">
+                    <Grid.Resources>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type Button}">
+                                        <Border x:Name="Border" Background="#FF52CF32" CornerRadius="100">
+                                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                        </Border>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter TargetName="Border" Property="Background" Value="Gold" />
+                                            </Trigger>
+                                            <Trigger Property="IsPressed" Value="True">
+                                                <Setter TargetName="Border" Property="Background" Value="Red" />
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </Grid.Resources>
+                    <StackPanel Orientation="Horizontal" DataContext="{Binding}">
+                        <Button Content="Hit" Height="30"  Name="hitButton" Width="80" Click="hitButton_Click" />
+                        <Button Content="Double" Height="30" Name="doubleButton" Width="80" Click="doubleButton_Click" Margin="10" />
+                        <Button Content="Stand" Height="30"  Name="standButton" Width="80" Click="standButton_Click" />
+                        <Button Content="Split" Height="30" Name="splitButton" Width="80" Click="splitButton_Click" DataContext="{Binding}" Margin="10" />
+                    </StackPanel>
+                </Grid>
             </Grid>
         </Grid>
     </Canvas>

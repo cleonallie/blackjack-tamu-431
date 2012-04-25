@@ -30,9 +30,9 @@
             <Image x:Name="e3" Source="/BlackJack-CS;component/Images/spade.png" Stretch="Fill" Width="45" Height="45" />
             <Image x:Name="e4" Source="/BlackJack-CS;component/Images/diamond.png" Stretch="Fill" Width="40" Height="40" />
             <TextBlock Height="23" Name="playerNameBlock" Text="Player Name" FontFamily="Cooper" FontSize="16" FontWeight="Normal" FontStyle="Normal" Foreground="Black" Canvas.Left="45" Canvas.Top="105"></TextBlock>
-            <TextBox Height="23" Name="playerNameTextBox" Width="120" TextChanged="PlayerNameTextBox_TextChanged" Text="Enter Name" IsReadOnly="False" Canvas.Left="45" Canvas.Top="134" />
+            <TextBox Height="23" Name="playerNameTextBox" Width="120" TextChanged="PlayerNameTextBox_TextChanged" Text="" IsReadOnly="False" Canvas.Left="45" Canvas.Top="134" />
             <TextBlock Height="23" Name="moneyBlock" Text="Starting Cash" Width="141" FontFamily="Cooper" FontSize="16" Canvas.Left="45" Canvas.Top="171" />
-            <TextBox Height="23" Name="playerStartingCash" Width="120" TextChanged="playerStartingCash_TextChanged" Text="Starting $" MaxLines="6" AutoWordSelection="False" CaretBrush="{x:Null}" ClipToBounds="False" Canvas.Left="45" Canvas.Top="200" />
+            <TextBox Height="23" Name="playerStartingCash" Width="120" TextChanged="playerStartingCash_TextChanged" Text="" MaxLines="6" AutoWordSelection="False" CaretBrush="{x:Null}" ClipToBounds="False" Canvas.Left="45" Canvas.Top="200" />
             <ListBox Height="91" Name="listBox1" Width="143" Canvas.Left="45" Canvas.Top="268">
                 <ListBoxItem Content="0 Computer Opponents" Selected="ListBoxItem_Selected_0" IsSelected="False"></ListBoxItem>
                 <ListBoxItem Content="1 Computer Opponents" Selected="ListBoxItem_Selected_1" IsSelected="False"></ListBoxItem>
@@ -45,6 +45,7 @@
             <Image Canvas.Left="542" MouseDown="startButton" Canvas.Top="396" Height="100" Name="image1" Stretch="Fill" Width="100" Source="/BlackJack-CS;component/Images/Forward%20-%20dark%20red.png" />
             <Border BorderBrush="Black" BorderThickness="4" Height="44" Name="border1" Background="#26000000" Margin="0,43,0,507" Width="837" Canvas.Left="-18" Canvas.Top="8"></Border>
             <TextBlock Text="BlackJack" FontSize="50" FontWeight="Bold" FontFamily="Magneto" TextAlignment="Center" Background="{x:Null}" Canvas.Left="220" Canvas.Top="43"><TextBlock.Foreground><LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0"><GradientStop Color="Black" Offset="0" /><GradientStop Color="#FF750303" Offset="1" /></LinearGradientBrush></TextBlock.Foreground></TextBlock>
+            
             <Popup x:Name="PopupTest" AllowsTransparency="True" Opened="PopupTest_Opened" Canvas.Left="19" Canvas.Top="0">
                 <Viewbox VerticalAlignment="Top">
                     <StackPanel>
@@ -53,6 +54,19 @@
                     </StackPanel>
                 </Viewbox>
             </Popup>
+
+            <TextBlock  Height="34" HorizontalAlignment="Left" Margin="272,123,0,0" Name="opponent1" Text="Oppenet 1's Name" VerticalAlignment="Top" Width="167" FontFamily="Cooper" FontSize="18" Opacity="1" Visibility="Hidden" Canvas.Left="-6" Canvas.Top="-15" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="272,149,0,0" Name="opponent1textBox" VerticalAlignment="Top" Width="167" Visibility="Hidden" Canvas.Left="-6" Canvas.Top="-15" TextChanged="opponent1textBox_TextChanged" />
+    
+            <TextBlock Height="34" HorizontalAlignment="Left" Margin="272,189,0,0" Name="opponent2" Text="Oppenet 2's Name" VerticalAlignment="Top" Width="167" FontFamily="Cooper" FontSize="18" Visibility="Hidden" Canvas.Left="-6" Canvas.Top="-26" Foreground="#FF640000" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="272,213,0,0" Name="opponent2textBox" VerticalAlignment="Top" Width="167" Visibility="Hidden" Canvas.Left="-6" Canvas.Top="-26" TextChanged="opponent2textBox_TextChanged" />
+      
+            <TextBlock Height="34" HorizontalAlignment="Left" Margin="460,123,0,0" Name="opponent3" Text="Oppenet 3's Name" VerticalAlignment="Top" Width="167" FontFamily="Cooper" FontSize="18" Visibility="Hidden" Canvas.Left="-194" Canvas.Top="90" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="460,149,0,0" Name="opponent3textBox" VerticalAlignment="Top" Width="167" Visibility="Hidden" Canvas.Left="-194" Canvas.Top="90" TextChanged="opponent3textBox_TextChanged" />
+
+            <TextBlock Height="34" HorizontalAlignment="Left" Margin="460,189,0,0" Name="opponent4" Text="Oppenet 4's Name" VerticalAlignment="Top" Width="167" FontFamily="Cooper" FontSize="18" Visibility="Hidden" Canvas.Left="-194" Canvas.Top="74" Foreground="#FF640000" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="460,213,0,0" Name="opponent4textBox" VerticalAlignment="Top" Width="167" Visibility="Hidden" Canvas.Left="-194" Canvas.Top="74" TextChanged="opponent4textBox_TextChanged" />
+           
         </Canvas>
             
       <Canvas Margin="645,500,0,0" >
@@ -74,11 +88,13 @@
 
         <Image x:Name="e5" Source="/BlackJack-CS;component/Images/spade.png" Stretch="Fill" Width="45" Height="45" />
         <Image x:Name="e6" Source="/BlackJack-CS;component/Images/diamond.png" Stretch="Fill" Width="40" Height="40" />
-
         <Image x:Name="e7" Source="/BlackJack-CS;component/Images/club.png" Stretch="Fill" Width="45" Height="45" />
         <Image x:Name="e8" Source="/BlackJack-CS;component/Images/heart.png" Stretch="Fill" Width="40" Height="40" />
         
         </Canvas>
-    </Grid>
+        
+         
+           
+       </Grid>
     
 </UserControl>
