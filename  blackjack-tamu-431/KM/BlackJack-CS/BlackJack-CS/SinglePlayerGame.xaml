@@ -6,7 +6,11 @@
              mc:Ignorable="d" Background="DarkGreen" OpacityMask="#FF690A0A" Foreground="Black" Height="500" Width="700">
     <Canvas Name="singlePlayerWindow" Visibility="Visible">
         <Grid>
+            
             <Grid Height="500" HorizontalAlignment="Left" Name="grid1" VerticalAlignment="Top" Width="800">
+                <Border BorderBrush="Black" BorderThickness="4" Height="46" HorizontalAlignment="Left" Margin="-10,6,0,0" Name="border1" VerticalAlignment="Top" Width="723" Background="#26000000" />
+                <TextBlock Text="BlackJack" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="50" FontWeight="Bold" FontFamily="Magneto" TextAlignment="Center" Background="{x:Null}" Margin="203,0,311,440"><TextBlock.Foreground><LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0"><GradientStop Color="Black" Offset="0" /><GradientStop Color="#FF750303" Offset="1" /></LinearGradientBrush></TextBlock.Foreground></TextBlock>
+
                 <Button Content="Hit" Height="23" HorizontalAlignment="Left" Margin="163,471,0,0" Name="hitButton" VerticalAlignment="Top" Width="75" Click="hitButton_Click" />
                 <Button Content="Stand" Height="23" HorizontalAlignment="Right" Margin="0,471,462,0" Name="standButton" VerticalAlignment="Top" Width="75" Click="standButton_Click" />
                 <Button Content="Double" Height="23" HorizontalAlignment="Right" Margin="0,471,362,0" Name="doubleButton" VerticalAlignment="Top" Width="75" Click="doubleButton_Click" />
@@ -68,7 +72,7 @@
                 <TextBox AcceptsReturn="True" BorderThickness="0" Height="23" HorizontalAlignment="Left" IsReadOnly="True" Margin="377,356,0,0" Name="user3Score" Text="0" TextAlignment="Center" VerticalAlignment="Top" Width="50" />
                 <TextBox AcceptsReturn="True" BorderThickness="0" Height="23" HorizontalAlignment="Left" IsReadOnly="True" Margin="483,356,0,0" Name="user4Score" Text="0" TextAlignment="Center" VerticalAlignment="Top" Width="50" />
                 <TextBox AcceptsReturn="True" BorderThickness="0" Height="23" HorizontalAlignment="Right" IsReadOnly="True" Margin="0,356,163,0" Name="user5Score" Text="0" TextAlignment="Center" VerticalAlignment="Top" Width="50" />
-
+                <StackPanel Name="stackPanel1" Margin="139,76,562,150" />
             </Grid>
         </Grid>
     </Canvas>

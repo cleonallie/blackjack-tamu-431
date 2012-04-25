@@ -6,16 +6,17 @@
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="800" Background="DarkGreen">
     <Grid>
+        
         <Canvas>
             <Canvas.Triggers>
             <EventTrigger RoutedEvent="Canvas.Loaded">
                 <EventTrigger.Actions>
                     <BeginStoryboard>
                         <Storyboard BeginTime="0" Duration="Forever">
-                            <DoubleAnimation Storyboard.TargetName="e1" Storyboard.TargetProperty="(Canvas.Right)" From="0" To="400" AutoReverse="true" BeginTime="0:0:0" Duration="0:0:1" RepeatBehavior="Forever"/>
-                            <DoubleAnimation Storyboard.TargetName="e2" Storyboard.TargetProperty="(Canvas.Left)" From="0" To="400" AutoReverse="true" BeginTime="0:0:0" Duration="0:0:1" RepeatBehavior="Forever"/>
-                            <DoubleAnimation Storyboard.TargetName="e3" Storyboard.TargetProperty="(Canvas.Top)" From="0" To="300" AutoReverse="true" BeginTime="0:0:0" Duration="0:0:1" RepeatBehavior="Forever"/>
-                            <DoubleAnimation Storyboard.TargetName="e4" Storyboard.TargetProperty="(Canvas.Bottom)" From="0" To="300" AutoReverse="true" BeginTime="0:0:0" Duration="0:0:1" RepeatBehavior="Forever"/>
+                            <DoubleAnimation Storyboard.TargetName="e1" Storyboard.TargetProperty="(Canvas.Right)" From="0" To="650" AutoReverse="true" BeginTime="0:0:0" Duration="0:0:3" RepeatBehavior="Forever"/>
+                            <DoubleAnimation Storyboard.TargetName="e2" Storyboard.TargetProperty="(Canvas.Left)" From="0" To="650" AutoReverse="true" BeginTime="0:0:0" Duration="0:0:2" RepeatBehavior="Forever"/>
+                            <DoubleAnimation Storyboard.TargetName="e3" Storyboard.TargetProperty="(Canvas.Top)" From="0" To="550" AutoReverse="true" BeginTime="0:0:0" Duration="0:0:3" RepeatBehavior="Forever"/>
+                            <DoubleAnimation Storyboard.TargetName="e4" Storyboard.TargetProperty="(Canvas.Bottom)" From="0" To="550" AutoReverse="true" BeginTime="0:0:0" Duration="0:0:2" RepeatBehavior="Forever"/>
                                
                             </Storyboard>
                     </BeginStoryboard>
@@ -28,19 +29,42 @@
 
             <Image x:Name="e3" Source="/BlackJack-CS;component/Images/spade.png" Stretch="Fill" Width="45" Height="45" />
             <Image x:Name="e4" Source="/BlackJack-CS;component/Images/diamond.png" Stretch="Fill" Width="40" Height="40" />
-           
+            <TextBlock Height="23" Name="playerNameBlock" Text="Player Name" FontFamily="Cooper" FontSize="16" FontWeight="Normal" FontStyle="Normal" Foreground="Black" Canvas.Left="45" Canvas.Top="105"></TextBlock>
+            <TextBox Height="23" Name="playerNameTextBox" Width="120" TextChanged="PlayerNameTextBox_TextChanged" Text="Enter Name" IsReadOnly="False" Canvas.Left="45" Canvas.Top="134" />
+            <TextBlock Height="23" Name="moneyBlock" Text="Starting Cash" Width="141" FontFamily="Cooper" FontSize="16" Canvas.Left="45" Canvas.Top="171" />
+            <TextBox Height="23" Name="playerStartingCash" Width="120" TextChanged="playerStartingCash_TextChanged" Text="Starting $" MaxLines="6" AutoWordSelection="False" CaretBrush="{x:Null}" ClipToBounds="False" Canvas.Left="45" Canvas.Top="200" />
+            <ListBox Height="91" Name="listBox1" Width="143" Canvas.Left="45" Canvas.Top="268">
+                <ListBoxItem Content="0 Computer Opponents" Selected="ListBoxItem_Selected_0" IsSelected="False"></ListBoxItem>
+                <ListBoxItem Content="1 Computer Opponents" Selected="ListBoxItem_Selected_1" IsSelected="False"></ListBoxItem>
+                <ListBoxItem Content="2 Computer Opponents" Selected="ListBoxItem_Selected_2" IsSelected="False"></ListBoxItem>
+                <ListBoxItem Content="3 Computer Opponents" Selected="ListBoxItem_Selected_3" IsSelected="False"></ListBoxItem>
+                <ListBoxItem Content="4 Computer Opponents" Selected="ListBoxItem_Selected_4" IsSelected="False"></ListBoxItem>
+            </ListBox>
+            <TextBlock Height="23" Name="textBlock1" Text="Number of Opponents" Width="184" FontFamily="Cooper" FontSize="16" Canvas.Left="45" Canvas.Top="239" />
+            <Image Height="100" MouseDown="backButton" Name="backButtonImage" Stretch="Fill" Width="100" Source="/BlackJack-CS;component/Images/Chip%20-%20back.png" Canvas.Left="45" Canvas.Top="396" />
+            <Image Canvas.Left="542" MouseDown="startButton" Canvas.Top="396" Height="100" Name="image1" Stretch="Fill" Width="100" Source="/BlackJack-CS;component/Images/Forward%20-%20dark%20red.png" />
+            <Border BorderBrush="Black" BorderThickness="4" Height="44" Name="border1" Background="#26000000" Margin="0,43,0,507" Width="837" Canvas.Left="-18" Canvas.Top="8"></Border>
+            <TextBlock Text="BlackJack" FontSize="50" FontWeight="Bold" FontFamily="Magneto" TextAlignment="Center" Background="{x:Null}" Canvas.Left="220" Canvas.Top="43"><TextBlock.Foreground><LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0"><GradientStop Color="Black" Offset="0" /><GradientStop Color="#FF750303" Offset="1" /></LinearGradientBrush></TextBlock.Foreground></TextBlock>
+            <Popup x:Name="PopupTest" AllowsTransparency="True" Opened="PopupTest_Opened" Canvas.Left="19" Canvas.Top="0">
+                <Viewbox VerticalAlignment="Top">
+                    <StackPanel>
+                        <Button Content="Go Back" Height="23" HorizontalAlignment="Left" Name="backName_yes" VerticalAlignment="Top" Width="75" Click="backButton_yes" />
+                        <Button Content="Cancel" Height="23" HorizontalAlignment="Left" Name="backName_no" VerticalAlignment="Top" Width="75" Click="backButton_no" />
+                    </StackPanel>
+                </Viewbox>
+            </Popup>
         </Canvas>
             
-      <Canvas Margin="650,500,0,0" >
+      <Canvas Margin="645,500,0,0" >
         <Canvas.Triggers>
             <EventTrigger RoutedEvent="Canvas.Loaded">
                 <EventTrigger.Actions>
                     <BeginStoryboard>
                         <Storyboard BeginTime="0" Duration="Forever">
-                            <DoubleAnimation Storyboard.TargetName="e5" Storyboard.TargetProperty="(Canvas.Right)" From="0" To="400" AutoReverse="true" BeginTime="0:0:0" Duration="0:0:1" RepeatBehavior="Forever"/>
-                            <DoubleAnimation Storyboard.TargetName="e6" Storyboard.TargetProperty="(Canvas.Left)" From="-600" To="-200" AutoReverse="true" BeginTime="0:0:0" Duration="0:0:1" RepeatBehavior="Forever"/>
-                            <DoubleAnimation Storyboard.TargetName="e7" Storyboard.TargetProperty="(Canvas.Top)" From="-500" To="-200" AutoReverse="true" BeginTime="0:0:0" Duration="0:0:1" RepeatBehavior="Forever"/>
-                            <DoubleAnimation Storyboard.TargetName="e8" Storyboard.TargetProperty="(Canvas.Bottom)" From="0" To="300" AutoReverse="true" BeginTime="0:0:0" Duration="0:0:1" RepeatBehavior="Forever"/>
+                            <DoubleAnimation Storyboard.TargetName="e5" Storyboard.TargetProperty="(Canvas.Right)" From="0" To="650" AutoReverse="true" BeginTime="0:0:0" Duration="0:0:2" RepeatBehavior="Forever"/>
+                            <DoubleAnimation Storyboard.TargetName="e6" Storyboard.TargetProperty="(Canvas.Left)" From="-650" To="000" AutoReverse="true" BeginTime="0:0:0" Duration="0:0:3" RepeatBehavior="Forever"/>
+                            <DoubleAnimation Storyboard.TargetName="e7" Storyboard.TargetProperty="(Canvas.Top)" From="-500" To="50" AutoReverse="true" BeginTime="0:0:0" Duration="0:0:2" RepeatBehavior="Forever"/>
+                            <DoubleAnimation Storyboard.TargetName="e8" Storyboard.TargetProperty="(Canvas.Bottom)" From="50" To="500" AutoReverse="true" BeginTime="0:0:0" Duration="0:0:3" RepeatBehavior="Forever"/>
 
                         </Storyboard>
                     </BeginStoryboard>
@@ -53,23 +77,8 @@
 
         <Image x:Name="e7" Source="/BlackJack-CS;component/Images/club.png" Stretch="Fill" Width="45" Height="45" />
         <Image x:Name="e8" Source="/BlackJack-CS;component/Images/heart.png" Stretch="Fill" Width="40" Height="40" />
-
+        
         </Canvas>
-
-        <TextBlock Height="23" HorizontalAlignment="Left" Margin="52,39,0,0" Name="playerNameBlock" Text="Player Name" VerticalAlignment="Top" FontFamily="Cooper" FontSize="16" FontWeight="Normal" FontStyle="Normal" Foreground="Black"></TextBlock>
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="52,68,0,0" Name="playerNameTextBox" VerticalAlignment="Top" Width="120" TextChanged="PlayerNameTextBox_TextChanged" Text="Enter Name" IsReadOnly="False" />
-        <TextBlock Height="23" HorizontalAlignment="Left" Margin="52,105,0,0" Name="moneyBlock" Text="Starting Cash" VerticalAlignment="Top" Width="141" FontFamily="Cooper" FontSize="16" />
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="52,134,0,0" Name="playerStartingCash" VerticalAlignment="Top" Width="120" TextChanged="playerStartingCash_TextChanged" Text="Starting $" MaxLines="6" AutoWordSelection="False" CaretBrush="{x:Null}" ClipToBounds="False" />
-        <ListBox Height="91" HorizontalAlignment="Left" Margin="52,202,0,0" Name="listBox1" VerticalAlignment="Top" Width="143" >
-            <ListBoxItem Content="0 Computer Opponents" Selected="ListBoxItem_Selected_0" IsSelected="False"></ListBoxItem>
-            <ListBoxItem Content="1 Computer Opponents" Selected="ListBoxItem_Selected_1" IsSelected="False"></ListBoxItem>
-            <ListBoxItem Content="2 Computer Opponents" Selected="ListBoxItem_Selected_2" IsSelected="False"></ListBoxItem>
-            <ListBoxItem Content="3 Computer Opponents" Selected="ListBoxItem_Selected_3" IsSelected="False"></ListBoxItem>
-            <ListBoxItem Content="4 Computer Opponents" Selected="ListBoxItem_Selected_4" IsSelected="False"></ListBoxItem>
-        </ListBox>
-        <TextBlock Height="23" HorizontalAlignment="Left" Margin="52,173,0,0" Name="textBlock1" Text="Number of Opponents" VerticalAlignment="Top" Width="184" FontFamily="Cooper" FontSize="16" />
-        <Image Height="100" MouseDown="backButton" HorizontalAlignment="Left" Margin="36,322,0,0" Name="backButtonImage" Stretch="Fill" VerticalAlignment="Top" Width="100" Source="/BlackJack-CS;component/Images/Chip%20-%20back.png"/>
-        <Image Canvas.Left="495"  MouseDown="startButton" Canvas.Top="322" Height="100" Name="image1" Stretch="Fill" Width="100" Source="/BlackJack-CS;component/Images/Forward%20-%20dark%20red.png" />
     </Grid>
     
 </UserControl>

@@ -9,7 +9,8 @@
     <Grid>
         <!-- Home screen -->
         <Canvas Name="homeScreen" Visibility="Visible">
-            <Grid Height="47" HorizontalAlignment="Left" Margin="0,153,0,0" Name="grid1" VerticalAlignment="Top" Width="687" Background="#4A000000" Opacity="1"></Grid>
+            <Border BorderBrush="Black" BorderThickness="4" Height="45" HorizontalAlignment="Left" Margin="-16,150,0,0" Name="border1" VerticalAlignment="Top" Width="842" Background="#26000000" Canvas.Top="0" />
+
             <Grid Height="271" Width="678" Canvas.Top="106">
                 <Grid.RowDefinitions>
                     <RowDefinition />
