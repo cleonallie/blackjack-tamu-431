@@ -36,3 +36,7 @@ C:\Users\KevinsLaptop\Desktop\repository\KM\BlackJack-CS\BlackJack-CS\obj\x86\Re
 C:\Users\KevinsLaptop\Desktop\repository\KM\BlackJack-CS\BlackJack-CS\obj\x86\Release\GenerateResource.write.1.tlog
 C:\Users\KevinsLaptop\Desktop\repository\KM\BlackJack-CS\BlackJack-CS\bin\Release\BlackJack-CS.exe
 C:\Users\KevinsLaptop\Desktop\repository\KM\BlackJack-CS\BlackJack-CS\bin\Release\BlackJack-CS.pdb
+C:\Users\KevinsLaptop\Desktop\repository\KM\BlackJack-CS\BlackJack-CS\obj\x86\Release\MultiPlayerOptions.baml
+C:\Users\KevinsLaptop\Desktop\repository\KM\BlackJack-CS\BlackJack-CS\obj\x86\Release\MultiplayerPlayerGame.baml
+C:\Users\KevinsLaptop\Desktop\repository\KM\BlackJack-CS\BlackJack-CS\obj\x86\Release\MultiPlayerOptions.g.cs
+C:\Users\KevinsLaptop\Desktop\repository\KM\BlackJack-CS\BlackJack-CS\obj\x86\Release\MultiplayerPlayerGame.g.cs

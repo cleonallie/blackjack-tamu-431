@@ -1,6 +1,7 @@
 ﻿<Window x:Class="BlackJack_CS.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        ResizeMode="NoResize"
         Title="MainWindow" Height="600" Width="700" Background="DarkGreen">
 	<Grid></Grid>
 </Window>
