@@ -45,7 +45,9 @@ namespace BlackJack_CS
         private void playerStartingCash_TextChanged(object sender, TextChangedEventArgs e)
         {
             int startcash;
-            char[] trimChars = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' ,'$'};
+            char[] trimChars = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' ,'$',
+                               'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','!','@','#','%','^','&','*','(',')','`','~',':','"','{','}'
+                                ,'[',']','<','>','?','/','_','-','+','='};
             if (int.TryParse(playerStartingCash.Text, out startcash))
             {
                 startingCash = startcash;
@@ -55,108 +57,6 @@ namespace BlackJack_CS
                 playerStartingCash.Text = playerStartingCash.Text.Trim(trimChars);
              
             }
-        }
-
-        private void ListBoxItem_Selected_0(object sender, RoutedEventArgs e)
-        {
-            comp1Active = System.Windows.Visibility.Hidden;
-            comp2Active = System.Windows.Visibility.Hidden;
-            comp3Active = System.Windows.Visibility.Hidden;
-            comp4Active = System.Windows.Visibility.Hidden;
-
-            opponent1.Visibility = System.Windows.Visibility.Hidden;
-            opponent1textBox.Visibility = System.Windows.Visibility.Hidden;
-            opponent1.IsEnabled = false;
-            opponent2.Visibility = System.Windows.Visibility.Hidden;
-            opponent2textBox.Visibility = System.Windows.Visibility.Hidden;
-            opponent2.IsEnabled = false;
-            opponent3.Visibility = System.Windows.Visibility.Hidden;
-            opponent3textBox.Visibility = System.Windows.Visibility.Hidden;
-            opponent3.IsEnabled = false;
-            opponent4.Visibility = System.Windows.Visibility.Hidden;
-            opponent4textBox.Visibility = System.Windows.Visibility.Hidden;
-            opponent4.IsEnabled = false;
-
-        }
-
-        private void ListBoxItem_Selected_1(object sender, RoutedEventArgs e)
-        {
-            comp1Active = System.Windows.Visibility.Visible;
-            comp2Active = System.Windows.Visibility.Hidden;
-            comp3Active = System.Windows.Visibility.Hidden;
-            comp4Active = System.Windows.Visibility.Hidden;
-            opponent1.Visibility = System.Windows.Visibility.Visible;
-            opponent1textBox.Visibility = System.Windows.Visibility.Visible;
-            opponent1.IsEnabled = true;
-            opponent2.Visibility = System.Windows.Visibility.Hidden;
-            opponent2textBox.Visibility = System.Windows.Visibility.Hidden;
-            opponent2.IsEnabled = false;
-            opponent3.Visibility = System.Windows.Visibility.Hidden;
-            opponent3textBox.Visibility = System.Windows.Visibility.Hidden;
-            opponent3.IsEnabled = false;
-            opponent4.Visibility = System.Windows.Visibility.Hidden;
-            opponent4textBox.Visibility = System.Windows.Visibility.Hidden;
-            opponent4.IsEnabled = false;
-        }
-
-        private void ListBoxItem_Selected_2(object sender, RoutedEventArgs e)
-        {
-            comp1Active = System.Windows.Visibility.Visible;
-            comp2Active = System.Windows.Visibility.Visible;
-            comp3Active = System.Windows.Visibility.Hidden;
-            comp4Active = System.Windows.Visibility.Hidden;
-            opponent1.Visibility = System.Windows.Visibility.Visible;
-            opponent1textBox.Visibility = System.Windows.Visibility.Visible;
-            opponent1.IsEnabled = true;
-            opponent2.Visibility = System.Windows.Visibility.Visible;
-            opponent2textBox.Visibility = System.Windows.Visibility.Visible;
-            opponent2.IsEnabled = true;
-            opponent3.Visibility = System.Windows.Visibility.Hidden;
-            opponent3textBox.Visibility = System.Windows.Visibility.Hidden;
-            opponent3.IsEnabled = false;
-            opponent4.Visibility = System.Windows.Visibility.Hidden;
-            opponent4textBox.Visibility = System.Windows.Visibility.Hidden;
-            opponent4.IsEnabled = false;
-        }
-
-        private void ListBoxItem_Selected_3(object sender, RoutedEventArgs e)
-        {
-            comp1Active = System.Windows.Visibility.Visible;
-            comp2Active = System.Windows.Visibility.Visible;
-            comp3Active = System.Windows.Visibility.Visible;
-            comp4Active = System.Windows.Visibility.Hidden;
-            opponent1.Visibility = System.Windows.Visibility.Visible;
-            opponent1textBox.Visibility = System.Windows.Visibility.Visible;
-            opponent1.IsEnabled = true;
-            opponent2.Visibility = System.Windows.Visibility.Visible;
-            opponent2textBox.Visibility = System.Windows.Visibility.Visible;
-            opponent2.IsEnabled = true;
-            opponent3.Visibility = System.Windows.Visibility.Visible;
-            opponent3textBox.Visibility = System.Windows.Visibility.Visible;
-            opponent3.IsEnabled = true;
-            opponent4.Visibility = System.Windows.Visibility.Hidden;
-            opponent4textBox.Visibility = System.Windows.Visibility.Hidden;
-            opponent4.IsEnabled = false;
-        }
-
-        private void ListBoxItem_Selected_4(object sender, RoutedEventArgs e)
-        {
-            comp1Active = System.Windows.Visibility.Visible;
-            comp2Active = System.Windows.Visibility.Visible;
-            comp3Active = System.Windows.Visibility.Visible;
-            comp4Active = System.Windows.Visibility.Visible;
-            opponent1.Visibility = System.Windows.Visibility.Visible;
-            opponent1textBox.Visibility = System.Windows.Visibility.Visible;
-            opponent1.IsEnabled = true;
-            opponent2.Visibility = System.Windows.Visibility.Visible;
-            opponent2textBox.Visibility = System.Windows.Visibility.Visible;
-            opponent2.IsEnabled = true;
-            opponent3.Visibility = System.Windows.Visibility.Visible;
-            opponent3textBox.Visibility = System.Windows.Visibility.Visible;
-            opponent3.IsEnabled = true;
-            opponent4.Visibility = System.Windows.Visibility.Visible;
-            opponent4textBox.Visibility = System.Windows.Visibility.Visible;
-            opponent4.IsEnabled = true;
         }
 
         private void backButton(object sender, MouseButtonEventArgs e)
@@ -193,36 +93,5 @@ namespace BlackJack_CS
         {
 
         }
-
-        private void opponent1textBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            comp1name = opponent1textBox.Text;
-        }
-
-        private void opponent2textBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            comp2name = opponent2textBox.Text;
-        }
-
-        private void opponent3textBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            comp3name = opponent3textBox.Text;
-        }
-
-        private void opponent4textBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            comp4name = opponent4textBox.Text;
-        }
-
-
-      
-
-
- 
-
-
-
-
-
     }
 }

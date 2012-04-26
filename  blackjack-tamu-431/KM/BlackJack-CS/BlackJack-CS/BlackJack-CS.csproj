@@ -57,6 +57,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="MultiPlayerOptions.xaml.cs">
+      <DependentUpon>MultiPlayerOptions.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MultiplayerPlayerGame.xaml.cs">
+      <DependentUpon>MultiplayerPlayerGame.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ISswitchable.cs" />
     <Compile Include="Menu.xaml.cs">
       <DependentUpon>Menu.xaml</DependentUpon>
@@ -68,6 +74,14 @@
       <DependentUpon>SinglePlayerOptions.xaml</DependentUpon>
     </Compile>
     <Compile Include="Switcher.cs" />
+    <Page Include="MultiPlayerOptions.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MultiplayerPlayerGame.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

@@ -10,11 +10,11 @@ none
 false
 TRACE
 C:\Users\KevinsLaptop\Desktop\repository\KM\BlackJack-CS\BlackJack-CS\App.xaml
-41383505828
+6-1270664082
 
-192106353870
+212004838515
 14-629149121
-MainWindow.xaml;Menu.xaml;SinglePlayerGame.xaml;SinglePlayerOptions.xaml;
+MultiPlayerOptions.xaml;MultiplayerPlayerGame.xaml;MainWindow.xaml;Menu.xaml;SinglePlayerGame.xaml;SinglePlayerOptions.xaml;
 
 False
 
