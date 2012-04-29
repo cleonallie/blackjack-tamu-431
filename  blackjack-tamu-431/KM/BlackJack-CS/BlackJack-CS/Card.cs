@@ -7,9 +7,7 @@ namespace engine
 			"FIVE","SIX","SEVEN","EIGHT","NINE","TEN","JACK","QUEEN","KING"};
         private string suit;
         private int face;
-
-       
-
+   
         public Card()
         {
            

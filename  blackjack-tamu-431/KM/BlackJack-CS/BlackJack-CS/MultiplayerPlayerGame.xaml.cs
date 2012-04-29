@@ -80,7 +80,7 @@ namespace BlackJack_CS
         private void backButton(object sender, MouseButtonEventArgs e)
         {
 
-            Switcher.Switch(new SinglePlayerOptions());
+            Switcher.Switch(new MultiPlayerOptions());
         }
 
         private void richTextBox1_TextChanged(object sender, TextChangedEventArgs e)
