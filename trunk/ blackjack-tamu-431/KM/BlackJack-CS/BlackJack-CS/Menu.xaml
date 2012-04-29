@@ -54,7 +54,7 @@
                 <TextBox Text="Single Player" Foreground="White" FontWeight="Bold" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" IsHitTestVisible="False" />
             </Grid>
             <Grid Canvas.Left="384" Canvas.Top="279">
-                <Image Source="/BlackJack-CS;component/Images/Chip%20-%20dark%20red.png" Height="132" Width="139" ImageFailed="Image_ImageFailed_1" />
+                <Image MouseDown="multiPlayerButton" Source="/BlackJack-CS;component/Images/Chip%20-%20dark%20red.png" Height="132" Width="139" ImageFailed="Image_ImageFailed_1" />
                 <TextBox Text="Multiplayer" Foreground="White" FontWeight="Bold" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" IsHitTestVisible="False" />
             </Grid>
         </Canvas>

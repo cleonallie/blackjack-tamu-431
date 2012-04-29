@@ -50,11 +50,15 @@ namespace BlackJack_CS
             Switcher.Switch(new SinglePlayerOptions());
         }
 
+        private void multiPlayerButton(object sender, MouseButtonEventArgs e)
+        {
+            Switcher.Switch(new MultiPlayerOptions());
+        }
+
         private void Image_ImageFailed_1(object sender, ExceptionRoutedEventArgs e)
         {
 
         }
-
 
 
 

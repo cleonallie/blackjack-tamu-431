@@ -87,8 +87,7 @@ public class Deck
 		List<Card> extraDeck = generateDeck();
 		//Collections.shuffle(extraDeck);
 		Random rnd = new Random();
-		for (int i = extraDeck.Count; i > 1; i--)  // shuffles the Deck of cards
-		{
+		for (int i = extraDeck.Count; i > 1; i--){  // shuffles the Deck of cards
 			int pos = rnd.Next(i);
 			var x = extraDeck[i - 1];
 			extraDeck[i - 1] = extraDeck[pos];
