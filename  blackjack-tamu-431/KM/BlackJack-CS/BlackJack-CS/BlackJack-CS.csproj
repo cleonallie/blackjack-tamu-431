@@ -141,7 +141,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\Chip - dark blue.png" />
-    <Resource Include="Images\spades-a-75.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\Chip - dark red.png" />
@@ -166,6 +165,71 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\Forward - dark red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\back-blue-75-1.png" />
+    <Resource Include="Images\back-blue-75-2.png" />
+    <Resource Include="Images\back-blue-75-3.png" />
+    <Resource Include="Images\back-red-75-1.png" />
+    <Resource Include="Images\back-red-75-2.png" />
+    <Resource Include="Images\back-red-75-3.png" />
+    <Resource Include="Images\clubs-10-75.png" />
+    <Resource Include="Images\clubs-2-75.png" />
+    <Resource Include="Images\clubs-3-75.png" />
+    <Resource Include="Images\clubs-4-75.png" />
+    <Resource Include="Images\clubs-5-75.png" />
+    <Resource Include="Images\clubs-6-75.png" />
+    <Resource Include="Images\clubs-7-75.png" />
+    <Resource Include="Images\clubs-8-75.png" />
+    <Resource Include="Images\clubs-9-75.png" />
+    <Resource Include="Images\clubs-a-75.png" />
+    <Resource Include="Images\clubs-j-75.png" />
+    <Resource Include="Images\clubs-k-75.png" />
+    <Resource Include="Images\clubs-q-75.png" />
+    <Resource Include="Images\diamonds-10-75.png" />
+    <Resource Include="Images\diamonds-2-75.png" />
+    <Resource Include="Images\diamonds-3-75.png" />
+    <Resource Include="Images\diamonds-4-75.png" />
+    <Resource Include="Images\diamonds-5-75.png" />
+    <Resource Include="Images\diamonds-6-75.png" />
+    <Resource Include="Images\diamonds-7-75.png" />
+    <Resource Include="Images\diamonds-8-75.png" />
+    <Resource Include="Images\diamonds-9-75.png" />
+    <Resource Include="Images\diamonds-a-75.png" />
+    <Resource Include="Images\diamonds-j-75.png" />
+    <Resource Include="Images\diamonds-k-75.png" />
+    <Resource Include="Images\diamonds-q-75.png" />
+    <Resource Include="Images\hearts-10-75.png" />
+    <Resource Include="Images\hearts-2-75.png" />
+    <Resource Include="Images\hearts-3-75.png" />
+    <Resource Include="Images\hearts-4-75.png" />
+    <Resource Include="Images\hearts-5-75.png" />
+    <Resource Include="Images\hearts-6-75.png" />
+    <Resource Include="Images\hearts-7-75.png" />
+    <Resource Include="Images\hearts-8-75.png" />
+    <Resource Include="Images\hearts-9-75.png" />
+    <Resource Include="Images\hearts-a-75.png" />
+    <Resource Include="Images\hearts-j-75.png" />
+    <Resource Include="Images\hearts-k-75.png" />
+    <Resource Include="Images\hearts-q-75.png" />
+    <Resource Include="Images\jackAce.png" />
+    <Resource Include="Images\joker-b-75.png" />
+    <Resource Include="Images\joker-r-75.png" />
+    <Resource Include="Images\spades-10-75.png" />
+    <Resource Include="Images\spades-2-75.png" />
+    <Resource Include="Images\spades-3-75.png" />
+    <Resource Include="Images\spades-4-75.png" />
+    <Resource Include="Images\spades-5-75.png" />
+    <Resource Include="Images\spades-6-75.png" />
+    <Resource Include="Images\spades-7-75.png" />
+    <Resource Include="Images\spades-8-75.png" />
+    <Resource Include="Images\spades-9-75.png" />
+    <Resource Include="Images\spades-j-75.png" />
+    <Resource Include="Images\spades-k-75.png" />
+    <Resource Include="Images\spades-q-75.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\spades-a-75.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

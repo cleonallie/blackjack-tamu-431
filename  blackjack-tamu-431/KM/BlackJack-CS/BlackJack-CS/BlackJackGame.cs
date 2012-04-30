@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using player;
+using BlackJack_CS;
 
 namespace engine {
 
@@ -52,27 +53,26 @@ public class BlackJackGame
 	/**
 	 * Decide how many players will play and initialize each of them.
 	 */
-	public void initializePlayers_Console()
+	public void initializePlayers_Console(int startingCash,int numPlayers,List<string> names)
 	{
-        int startCash;
-		Console.WriteLine("How many players will there be?");
-        string input = Console.ReadLine();
+		   //Console.WriteLine("How many players will there be?");
+         // string input = Console.ReadLine();
         
-        while (!int.TryParse(input, out numPlayers)){
-            Console.WriteLine("That is not a valid entry");
-                input = Console.ReadLine();
-         }
+         //  while (!int.TryParse(input, out numPlayers)){
+        //Console.WriteLine("That is not a valid entry");
+        //        input = Console.ReadLine();
+         //}
 		
 		// Set starting cash
-		Console.WriteLine("\nHow much money will each player start with?");
-		Console.Write("$");
-        string input2 = Console.ReadLine();
+	//	Console.WriteLine("\nHow much money will each player start with?");
+	//	Console.Write("$");
+    //    string input2 = Console.ReadLine();
 
-        while (!int.TryParse(input2, out startCash))
-        {
-            Console.WriteLine("That is not a valid entry");
-            input2 = Console.ReadLine();
-        }  
+     //   while (!int.TryParse(input2, out startCash))
+     //  {
+      //      Console.WriteLine("That is not a valid entry");
+     //      input2 = Console.ReadLine();
+        //}  
 		//Console.WriteLine(startCash);
         // Clear any characters still in the buffer
 		
@@ -81,11 +81,11 @@ public class BlackJackGame
 		for (int player = 0; player < numPlayers; player++) {
 			players[player] = new Player("\"Player " + (player+1) + "\"");
 
-            Console.WriteLine(players[player].getName() + ", enter your name: ");
-            name = Console.ReadLine();
+           // Console.WriteLine(players[player].getName() + ", enter your name: ");
+            name = names[player];
 			
 			players[player].setName(name);
-			players[player].setCash(startCash);
+            players[player].setCash(startingCash);
 			players[player].setWinCount(0);
 		}
 	}
@@ -350,22 +350,22 @@ public class BlackJackGame
 		for (int i = 0; i < winsWinners.Count; i++) {
 			Console.WriteLine((i+1)+ ". " +winsWinners[i]+ "\t\t Wins Total = " +mostWins);
 		}
-		Console.WriteLine("-------------------------------------------");		
+		Console.WriteLine("-------------------------------------------");
 	}
 
-	public void playGame()
+	public void playGame(int money, int numPlayers, List<string> names)
 	{
 		int gameNumber = 0;
 		bool continueGame = true;
 		
-		Console.WriteLine("\nWelcome to the game.\n");
+		//Console.WriteLine("\nWelcome to the game.\n");
 		
 		// Set number of players and starting cash
-		initializePlayers_Console();
+		initializePlayers_Console(money,numPlayers,names);
 		
 		do {
-			gameNumber++;
-			displayGameHeader_Console(gameNumber);	// Display game information
+		//	gameNumber++;
+			//displayGameHeader_Console(gameNumber);	// Display game information
 			shuffleAndReset();				// Shuffle and reset all hands and variables
 			dealFirstCards();				// Deal each player their first cards
 			placeBets_Console();
