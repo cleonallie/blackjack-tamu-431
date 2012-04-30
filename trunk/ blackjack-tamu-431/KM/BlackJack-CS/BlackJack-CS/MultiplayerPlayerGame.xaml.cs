@@ -27,6 +27,7 @@ namespace BlackJack_CS
         List<double> Player4CardPos;
         List<double> Player5CardPos;
         public int startingCash;
+        double b = 20;
         
         public MultiPlayerGame(List<string> names, List<Visibility> bools, int cash)
         {
@@ -71,17 +72,26 @@ namespace BlackJack_CS
 
         private void displayCard(List<double> Player,Card card)
         {
+            b= b + 40;
             StackPanel newCard = new StackPanel();
-            newCard.Margin = new Thickness(Player[0], Player[1], Player[2], Player[3]);
+            newCard.Margin = new Thickness(150,b, 578, 170);
             newCard.Visibility = System.Windows.Visibility.Visible;
             grid1.Children.Add(newCard);
             System.Windows.Controls.Image img = new System.Windows.Controls.Image();
-            img.Source = new BitmapImage(new Uri("../Images/" + card.getSuit() + "-" + card.getValue() + "-75.png", UriKind.RelativeOrAbsolute));
+            img.Source = new BitmapImage(new Uri("../Images/clubs-10-75.png",UriKind.RelativeOrAbsolute));//"../Images/" + card.getSuit() + "-" + card.getValue() + "-75.png", UriKind.RelativeOrAbsolute));
             newCard.Children.Add(img);
         }
 
         private void hitButton_Click(object sender, RoutedEventArgs e)
         {
+            b = b + 40;
+            StackPanel newCard = new StackPanel();
+            newCard.Margin = new Thickness(150, b, 578, 170);
+            newCard.Visibility = System.Windows.Visibility.Visible;
+            grid1.Children.Add(newCard);
+            System.Windows.Controls.Image img = new System.Windows.Controls.Image();
+            img.Source = new BitmapImage(new Uri("../Images/clubs-10-75.png", UriKind.RelativeOrAbsolute));//"../Images/" + card.getSuit() + "-" + card.getValue() + "-75.png", UriKind.RelativeOrAbsolute));
+            newCard.Children.Add(img);
 
         }
 
