@@ -26,6 +26,7 @@
                             <GradientStop Color="DarkGreen" Offset="0" />
                         </LinearGradientBrush>
                     </GroupBox.Background>
+                    
                 </GroupBox>
         
                 <GroupBox Header="User2" Height="300" Name="User2_Box" Width="100" Margin="245,50,455,150" Foreground="White">
@@ -61,19 +62,19 @@
                     </GroupBox.Background>
                 </GroupBox>
 
-                <TextBox AcceptsReturn="True" BorderThickness="0" Height="23" HorizontalAlignment="Left" IsReadOnly="True" Margin="55,356,0,0"  Name="dealerScore" Text="0" TextAlignment="Center" VerticalAlignment="Top" Width="50" />
-                <TextBox AcceptsReturn="True" BorderThickness="0" Height="23" HorizontalAlignment="Left" IsReadOnly="True" Margin="163,356,0,0" Name="user1Score" Text="0" TextAlignment="Center" VerticalAlignment="Top" Width="50" />
-                <TextBox AcceptsReturn="True" BorderThickness="0" Height="23" HorizontalAlignment="Left" IsReadOnly="True" Margin="272,356,0,0" Name="user2Score" Text="0" TextAlignment="Center" VerticalAlignment="Top" Width="50" />
-                <TextBox AcceptsReturn="True" BorderThickness="0" Height="23" HorizontalAlignment="Left" IsReadOnly="True" Margin="377,356,0,0" Name="user3Score" Text="0" TextAlignment="Center" VerticalAlignment="Top" Width="50" />
-                <TextBox AcceptsReturn="True" BorderThickness="0" Height="23" HorizontalAlignment="Left" IsReadOnly="True" Margin="483,356,0,0" Name="user4Score" Text="0" TextAlignment="Center" VerticalAlignment="Top" Width="50" />
-                <TextBox AcceptsReturn="True" BorderThickness="0" Height="23" HorizontalAlignment="Right" IsReadOnly="True" Margin="0,356,163,0" Name="user5Score" Text="0" TextAlignment="Center" VerticalAlignment="Top" Width="50" />
-                <StackPanel Name="stackPanel1" Margin="139,76,562,150"></StackPanel>
+                <TextBlock Height="23" HorizontalAlignment="Left"   Margin="55,356,0,0"  Name="dealerScore" Text="0" TextAlignment="Center" VerticalAlignment="Top" Width="50" Padding="1" FontSize="16" FontWeight="Bold" />
+                <TextBlock Height="23" HorizontalAlignment="Left"   Margin="163,356,0,0" Name="user1Score" Text="0" TextAlignment="Center" VerticalAlignment="Top" Width="50" Padding="1" FontSize="16" FontWeight="Bold" />
+                <TextBlock Height="23" HorizontalAlignment="Left" Margin="272,356,0,0" Name="user2Score" Text="0" TextAlignment="Center" VerticalAlignment="Top" Width="50" Padding="1" FontSize="16" FontWeight="Bold" />
+                <TextBlock Height="23" HorizontalAlignment="Left"  Margin="377,356,0,0" Name="user3Score" Text="0" TextAlignment="Center" VerticalAlignment="Top" Width="50" Padding="1" FontSize="16" FontWeight="Bold" />
+                <TextBlock Height="23" HorizontalAlignment="Left"  Margin="483,356,0,0" Name="user4Score" Text="0" TextAlignment="Center" VerticalAlignment="Top" Width="50" Padding="1" FontSize="16" FontWeight="Bold" />
+                <TextBlock  Height="23" HorizontalAlignment="Right"  Margin="0,356,163,0" Name="user5Score" Text="0" TextAlignment="Center" VerticalAlignment="Top" Width="50" Padding="1" FontSize="16" FontWeight="Bold" />
+                <StackPanel Name="User1Hand" Margin="155,76,576,170"></StackPanel>
                 <TextBlock Height="23" HorizontalAlignment="Left" Margin="163,394,0,0" Name="user1Cash" Text="" VerticalAlignment="Top" FontFamily="Cooper" FontSize="16" />
                 <TextBlock Height="23" HorizontalAlignment="Left" Margin="272,394,0,0" Name="user2Cash" Text="" VerticalAlignment="Top" FontFamily="Cooper" FontSize="16" />
                 <TextBlock Height="23" HorizontalAlignment="Left" Margin="377,394,0,0" Name="user3Cash" Text="" VerticalAlignment="Top" FontFamily="Cooper" FontSize="16" />
                 <TextBlock Height="23" HorizontalAlignment="Left" Margin="483,394,0,0" Name="user4Cash" Text="" VerticalAlignment="Top" FontFamily="Cooper" FontSize="16" />
                 <TextBlock Height="23" HorizontalAlignment="Left" Margin="587,394,0,0" Name="user5Cash" Text="" VerticalAlignment="Top" FontFamily="Cooper" FontSize="16" />
-                <Grid Margin="169,407,193,22">
+                <Grid Margin="155,394,207,-52">
                     <Grid.Resources>
                         <Style TargetType="{x:Type Button}">
                             <Setter Property="Template">
@@ -97,11 +98,14 @@
                     </Grid.Resources>
                     <StackPanel Orientation="Horizontal" DataContext="{Binding}">
                         <Button Content="Hit" Height="30"  Name="hitButton" Width="80" Click="hitButton_Click" />
-                        <Button Content="Double" Height="30" Name="doubleButton" Width="80" Click="doubleButton_Click" Margin="10" />
-                        <Button Content="Stand" Height="30"  Name="standButton" Width="80" Click="standButton_Click" />
+                        <Button Content="Stand" Height="30" Name="standButton" Width="80" Click="standButton_Click" Margin="10"/>
+                        <Button Content="Double" Height="30" Name="doubleButton" Width="80" Click="doubleButton_Click"  />
                         <Button Content="Split" Height="30" Name="splitButton" Width="80" Click="splitButton_Click" DataContext="{Binding}" Margin="10" />
+                        
                     </StackPanel>
+                    <Button Content="Bet" Height="30" Name="betButton" Width="75" Margin="50,-80,0,0"/> 
                 </Grid>
+                <TextBox Height="23" HorizontalAlignment="Left" Margin="235,423,0,0" Name="betTextBox" VerticalAlignment="Top" Width="120" TextChanged="betTextBox_TextChanged" />
             </Grid>
         </Grid>
     </Canvas>
