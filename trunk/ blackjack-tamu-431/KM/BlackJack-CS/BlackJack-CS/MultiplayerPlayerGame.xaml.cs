@@ -21,24 +21,25 @@ namespace BlackJack_CS
     /// </summary>
     public partial class MultiPlayerGame: UserControl
     {
-        List<double> Player1CardPos;
-        List<double> Player2CardPos;
-        List<double> Player3CardPos;
-        List<double> Player4CardPos;
-        List<double> Player5CardPos;
+        List<double> Player1CardPos = new List<double>();
+        List<double> Player2CardPos = new List<double>();
+        List<double> Player3CardPos = new List<double>();
+        List<double> Player4CardPos = new List<double>();
+        List<double> Player5CardPos = new List<double>();
         public int startingCash;
-        double b = 20;
+        Card sJack;
         
         public MultiPlayerGame(List<string> names, List<Visibility> bools, int cash)
         {
-            startingCash = cash;
-            //Player1CardPos.Add(150); Player1CardPos.Add(40); Player1CardPos.Add(578); Player1CardPos.Add(170);
-            //Player2CardPos.Add(150); Player2CardPos.Add(40); Player2CardPos.Add(578); Player2CardPos.Add(170);
-            //Player3CardPos.Add(150); Player3CardPos.Add(40); Player3CardPos.Add(578); Player3CardPos.Add(170);
-            //Player4CardPos.Add(150); Player4CardPos.Add(40); Player4CardPos.Add(578); Player4CardPos.Add(170);
-            //Player5CardPos.Add(150); Player5CardPos.Add(40); Player5CardPos.Add(578); Player5CardPos.Add(170);
-
             InitializeComponent();
+            startingCash = cash;
+            Player1CardPos.Add(150); Player1CardPos.Add(40); Player1CardPos.Add(578); Player1CardPos.Add(170);
+         //   Player2CardPos.Add(150); Player2CardPos.Add(40); Player2CardPos.Add(578); Player2CardPos.Add(170);
+         //   Player3CardPos.Add(150); Player3CardPos.Add(40); Player3CardPos.Add(578); Player3CardPos.Add(170);
+          //  Player4CardPos.Add(150); Player4CardPos.Add(40); Player4CardPos.Add(578); Player4CardPos.Add(170);
+          //  Player5CardPos.Add(150); Player5CardPos.Add(40); Player5CardPos.Add(578); Player5CardPos.Add(170);
+
+            
             User1_Box.Header = names[0];
             User2_Box.Header = names[1];
             User3_Box.Header = names[2];
@@ -72,27 +73,19 @@ namespace BlackJack_CS
 
         private void displayCard(List<double> Player,Card card)
         {
-            b= b + 40;
             StackPanel newCard = new StackPanel();
-            newCard.Margin = new Thickness(150,b, 578, 170);
+            newCard.Margin = new Thickness(Player[0], Player[1], Player[2], Player[3]);
             newCard.Visibility = System.Windows.Visibility.Visible;
             grid1.Children.Add(newCard);
             System.Windows.Controls.Image img = new System.Windows.Controls.Image();
-            img.Source = new BitmapImage(new Uri("../Images/clubs-10-75.png",UriKind.RelativeOrAbsolute));//"../Images/" + card.getSuit() + "-" + card.getValue() + "-75.png", UriKind.RelativeOrAbsolute));
+            img.Source = new BitmapImage(new Uri("../Images/" + card.getSuit() + "-" + card.getFace() + "-75.png", UriKind.RelativeOrAbsolute));
             newCard.Children.Add(img);
         }
 
         private void hitButton_Click(object sender, RoutedEventArgs e)
         {
-            b = b + 40;
-            StackPanel newCard = new StackPanel();
-            newCard.Margin = new Thickness(150, b, 578, 170);
-            newCard.Visibility = System.Windows.Visibility.Visible;
-            grid1.Children.Add(newCard);
-            System.Windows.Controls.Image img = new System.Windows.Controls.Image();
-            img.Source = new BitmapImage(new Uri("../Images/clubs-10-75.png", UriKind.RelativeOrAbsolute));//"../Images/" + card.getSuit() + "-" + card.getValue() + "-75.png", UriKind.RelativeOrAbsolute));
-            newCard.Children.Add(img);
 
+          // displayCard(Player1CardPos, sJack);
         }
 
         private void standButton_Click(object sender, RoutedEventArgs e)
